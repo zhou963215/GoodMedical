@@ -1,0 +1,29 @@
+//
+//  pch.pch
+//  GoodMedical
+//
+//  Created by zhou on 2017/7/25.
+//  Copyright © 2017年 zhou. All rights reserved.
+//
+
+#ifndef pch_pch
+#define pch_pch
+#import <UIKit/UIKit.h>
+#import <Masonry/Masonry.h>
+#import "ZHHud.h"
+#define WIDTH [UIScreen mainScreen].bounds.size.width
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
+
+
+#define RGB(a,b,c)   [UIColor colorWithRed:(a)/255.0 green:(b)/255.0 blue:(c)/255.0 alpha:1]
+#define UICOLORRGB(hex)           [UIColor colorWithRed:(((hex) & 0xFF0000) >> 16)/255.0f green:(CGFloat) (((hex) & 0xFF00) >> 8)/255.0f blue:((hex) & 0xFF)/255.0f alpha:1]
+
+#define WEAKSELF(weakSelf)      __weak __typeof(&*self)weakSelf = self;
+
+
+
+
+
+
+
+#endif /* pch_pch */
