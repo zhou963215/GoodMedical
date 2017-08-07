@@ -36,11 +36,14 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        self.backgroundColor = [UIColor lightGrayColor];
+        
+        self.backgroundColor =GAYCOLOR;
+        _dataArray = [NSMutableArray array];
         _selectArray = [NSMutableArray array];
         selectCode = 1000;
         startCode = 1001;
         endCode = 1002;
+        [self creatTestData];
         [self creatHeadView];
         [self setuCollection];
         
@@ -48,6 +51,17 @@
     
     return self;
 }
+
+
+- (void)setDataArray:(NSMutableArray *)dataArray{
+    
+    _dataArray = dataArray;
+    
+    [self.collection reloadData];
+    
+}
+
+
 
 - (void)setuCollection
 {
@@ -60,9 +74,9 @@
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     _flowLayout = flowLayout;
     
-    UICollectionView *mainView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 44, WIDTH, self.frame.size.height-45) collectionViewLayout:flowLayout];
+    UICollectionView *mainView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 44, WIDTH, 300) collectionViewLayout:flowLayout];
     
-    mainView.backgroundColor = [UIColor lightGrayColor];
+    mainView.backgroundColor = GAYCOLOR;
     mainView.scrollEnabled = NO;
     mainView.pagingEnabled = YES;
     mainView.showsHorizontalScrollIndicator = NO;
@@ -86,7 +100,9 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PeriodCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"period" forIndexPath:indexPath];
-    [cell setUpDataWithNSDictionary:@{@"time":@"10:00",@"price" : @"200/h"}];
+    
+    NSDictionary * dict = _dataArray[indexPath.row];
+    [cell setUpDataWithNSDictionary:dict];
     
     cell.contentView.backgroundColor = [UIColor whiteColor];
 
@@ -180,17 +196,42 @@
         
     }
     
+  
+        
+    self.selectDateBlock(startCode, endCode,sucessType);
+    
+    
     [collectionView reloadData];
     
+    
+}
+
+- (void)selectDateOfMonth:(void(^)(NSInteger star,NSInteger end,BOOL isSuccess))selectBlock{
+
+    [self setSelectDateBlock:selectBlock];
     
 }
 
 
 - (void)creatHeadView{
     
+    
+    
     UIView * headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 43)];
     headView.backgroundColor = [UIColor whiteColor];
     [self addSubview:headView];
+    
+    UIView * topline = [UIView new];
+    topline.backgroundColor = [UIColor grayColor];
+    [headView addSubview:topline];
+    
+    [topline mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.right.top.equalTo(headView);
+        make.height.mas_equalTo (@1);
+    }];
+    
+    
     
     UILabel * titleLabel = [UILabel new];
     titleLabel.textColor = [UIColor blackColor];
@@ -212,5 +253,18 @@
 }
 
 
+- (void)creatTestData{
+    
+    for (int i = 0; i < 24 ; i++) {
+        
+        NSDictionary * dict = @{@"time":@"10:00",@"price" : @"200"};
+        
+        [_dataArray addObject:dict];
+        
+        
+    }
+    
+    
+}
 
 @end

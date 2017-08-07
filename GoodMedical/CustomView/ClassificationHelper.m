@@ -93,8 +93,8 @@
     
     
     NSString * str = [NSString stringWithFormat:@"%ld",indexPath.row+1];
-    
     self.lastSelectDict = @{@"name":str};
+    
     [tableView reloadData];
     
 }

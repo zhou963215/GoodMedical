@@ -11,5 +11,9 @@
 @interface PeriodTimeView : UIView
 
 @property (nonatomic,strong) NSMutableArray * dataArray;
+@property (nonatomic ,copy)void(^selectDateBlock)(NSInteger,NSInteger,BOOL);
+
+
+- (void)selectDateOfMonth:(void(^)(NSInteger star,NSInteger end,BOOL isSuccess))selectBlock;
 
 @end

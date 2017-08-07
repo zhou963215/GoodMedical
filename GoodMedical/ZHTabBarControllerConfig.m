@@ -52,7 +52,7 @@
 }
 - (NSArray *)viewControllers {
     HomeViewController *firstViewController = [[HomeViewController alloc] init];
-    firstViewController.navigationItem.title = @"珍室";
+    firstViewController.navigationItem.title = @"诊室";
     UIViewController *firstNavigationController = [[ZHBaseNavigationController alloc]
                                                    initWithRootViewController:firstViewController];
     

@@ -41,6 +41,11 @@
     if (self.disabled) {
         return;
     }
+    UIView *superView = self.superview;
+    while(![superView isMemberOfClass:[UITableView class]]){
+        superView = superView.superview;
+    }
+    [superView endEditing:YES];
     [[UIApplication sharedApplication].delegate.window addSubview:self.actionView];
 }
 

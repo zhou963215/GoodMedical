@@ -18,6 +18,8 @@
     [super viewDidLoad];
     
     self.navigationController.navigationBar.translucent=NO;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setBarTintColor: RGB(27, 130, 210)];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:17],NSForegroundColorAttributeName:[UIColor whiteColor]}];

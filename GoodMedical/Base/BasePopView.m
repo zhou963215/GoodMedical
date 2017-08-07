@@ -77,18 +77,23 @@
     _canceButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_canceButton setTitle:@"取消" forState:UIControlStateNormal];
     _canceButton.titleLabel.font = [UIFont systemFontOfSize:14];
-    [_canceButton setTitleColor:UICOLORRGB(0xf8f8f8) forState:UIControlStateNormal];
+    [_canceButton setTitleColor:UICOLORRGB(0x35ace1) forState:UIControlStateNormal];
     [_canceButton addTarget:self action:@selector(clickBgViewToHide) forControlEvents:UIControlEventTouchUpInside];
     [_totolBar addSubview:_canceButton];
     
     _submitButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_submitButton setTitle:@"确定" forState:UIControlStateNormal];
     _submitButton.titleLabel.font = [UIFont systemFontOfSize:14];
-    [_submitButton setTitleColor:UICOLORRGB(0x35eca1) forState:UIControlStateNormal];
+    [_submitButton setTitleColor:UICOLORRGB(0x35ace1) forState:UIControlStateNormal];
     [_submitButton addTarget:self action:@selector(submitData) forControlEvents:UIControlEventTouchUpInside];
     
     [_totolBar addSubview:_submitButton];
 
+    UIView * line = [UIView new];
+    line.backgroundColor = [UIColor lightGrayColor];
+    [_totolBar addSubview:line];
+    
+    
     WEAKSELF(wk);
     
     [_canceButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -106,6 +111,13 @@
         make.top.equalTo(wk.totolBar).offset(10);
         make.bottom.right.equalTo(wk.totolBar).offset(-10);
         make.width.mas_equalTo(@40);
+        
+    }];
+    
+    [line mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.right.bottom.equalTo(wk.totolBar);
+        make.height.mas_equalTo(@1);
         
     }];
     
@@ -202,7 +214,7 @@
     if (!_totolBar) {
         
         _totolBar = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 44)];
-        _totolBar.backgroundColor = [UIColor orangeColor];
+        _totolBar.backgroundColor = [UIColor whiteColor];
     }
     
     

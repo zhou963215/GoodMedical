@@ -8,7 +8,7 @@
 
 #import "OperationProjectCell.h"
 #import "OperationView.h"
-
+#import "TotalPriceModel.h"
 @interface OperationProjectCell ()
 
 
@@ -49,7 +49,12 @@
     if (self.disabled) {
         return;
     }
-    
+    UIView *superView = self.superview;
+    while(![superView isMemberOfClass:[UITableView class]]){
+        superView = superView.superview;
+    }
+    [superView endEditing:YES];
+
     OperationView * op = [[OperationView alloc]initAlertViewHeight:300];
     if (self.label.text.length > 0) {
         
@@ -62,11 +67,11 @@
         
         self.label.text = dict[@"name"];
         self.values = @[dict[@"name"]];
+        [TotalPriceModel dataModel].projectPrice = 100;
         
     };
 
     
-//    [[UIApplication sharedApplication].delegate.window addSubview:op];
 
     
 }

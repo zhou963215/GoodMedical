@@ -13,6 +13,14 @@
 		CB0462CD1F2F162200133A19 /* ProjectScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0462CC1F2F162200133A19 /* ProjectScrollView.m */; };
 		CB0462D41F2F1FFD00133A19 /* ProjectPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0462D31F2F1FFD00133A19 /* ProjectPopView.m */; };
 		CB0462DA1F2F215F00133A19 /* ProjectPopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0462D91F2F215F00133A19 /* ProjectPopCell.m */; };
+		CB0462DD1F30132D00133A19 /* ShoppingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0462DC1F30132D00133A19 /* ShoppingHelper.m */; };
+		CB0462E11F3014AD00133A19 /* ShoppingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0462E01F3014AD00133A19 /* ShoppingModel.m */; };
+		CB0462E51F301A7700133A19 /* ShoppingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0462E31F301A7700133A19 /* ShoppingTableViewCell.m */; };
+		CB0462E61F301A7700133A19 /* ShoppingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0462E41F301A7700133A19 /* ShoppingTableViewCell.xib */; };
+		CB0462EA1F3025D200133A19 /* ShoppingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0462E91F3025D200133A19 /* ShoppingView.m */; };
+		CB0462ED1F30302A00133A19 /* ShoppingPopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0462EC1F30302A00133A19 /* ShoppingPopCell.m */; };
+		CB0462F01F30671100133A19 /* UIView+Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0462EF1F30671100133A19 /* UIView+Controller.m */; };
+		CB0462F31F306B4800133A19 /* TotalPriceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0462F21F306B4800133A19 /* TotalPriceModel.m */; };
 		CB120D581F271DCE0091477C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB120D571F271DCE0091477C /* main.m */; };
 		CB120D5B1F271DCE0091477C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB120D5A1F271DCE0091477C /* AppDelegate.m */; };
 		CB120D5E1F271DCE0091477C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB120D5D1F271DCE0091477C /* ViewController.m */; };
@@ -22,6 +30,43 @@
 		CB120D711F271DCE0091477C /* GoodMedicalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB120D701F271DCE0091477C /* GoodMedicalTests.m */; };
 		CB120D7C1F271DCE0091477C /* GoodMedicalUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB120D7B1F271DCE0091477C /* GoodMedicalUITests.m */; };
 		CB120DD81F2746080091477C /* ZHTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CB120DD71F2746080091477C /* ZHTabBarControllerConfig.m */; };
+		CB990D951F3169A100B8AD40 /* BSLCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D851F3169A100B8AD40 /* BSLCalendar.m */; };
+		CB990D961F3169A100B8AD40 /* BSLMonthCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D881F3169A100B8AD40 /* BSLMonthCollectionView.m */; };
+		CB990D971F3169A100B8AD40 /* CalendaDaysCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D8A1F3169A100B8AD40 /* CalendaDaysCell.m */; };
+		CB990D981F3169A100B8AD40 /* WeeksView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D8C1F3169A100B8AD40 /* WeeksView.m */; };
+		CB990D991F3169A100B8AD40 /* MonthOpeartion.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D8F1F3169A100B8AD40 /* MonthOpeartion.m */; };
+		CB990D9A1F3169A100B8AD40 /* NSDate+Decomposer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D911F3169A100B8AD40 /* NSDate+Decomposer.m */; };
+		CB990D9B1F3169A100B8AD40 /* CalendarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D941F3169A100B8AD40 /* CalendarModel.m */; };
+		CB990DB51F31756E00B8AD40 /* HomeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990DB41F31756E00B8AD40 /* HomeHelper.m */; };
+		CB990DBB1F3177E200B8AD40 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990DBA1F3177E200B8AD40 /* HomeCollectionViewCell.m */; };
+		CB990DF91F318ABF00B8AD40 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990DEC1F318ABF00B8AD40 /* TAAbstractDotView.m */; };
+		CB990DFA1F318ABF00B8AD40 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990DEE1F318ABF00B8AD40 /* TAAnimatedDotView.m */; };
+		CB990DFB1F318ABF00B8AD40 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990DF01F318ABF00B8AD40 /* TADotView.m */; };
+		CB990DFC1F318ABF00B8AD40 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990DF21F318ABF00B8AD40 /* TAPageControl.m */; };
+		CB990DFD1F318ABF00B8AD40 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990DF41F318ABF00B8AD40 /* SDCollectionViewCell.m */; };
+		CB990DFE1F318ABF00B8AD40 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990DF61F318ABF00B8AD40 /* SDCycleScrollView.m */; };
+		CB990DFF1F318ABF00B8AD40 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990DF81F318ABF00B8AD40 /* UIView+SDExtension.m */; };
+		CB990E1A1F31AA9200B8AD40 /* PlatformeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990E191F31AA9200B8AD40 /* PlatformeViewController.m */; };
+		CB990E1E1F31AC0100B8AD40 /* PlatformeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990E1D1F31AC0100B8AD40 /* PlatformeHelper.m */; };
+		CB990E221F31AEF500B8AD40 /* MapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990E201F31AEF500B8AD40 /* MapTableViewCell.m */; };
+		CB990E231F31AEF500B8AD40 /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB990E211F31AEF500B8AD40 /* MapTableViewCell.xib */; };
+		CB990E261F31B3B400B8AD40 /* CalendarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990E251F31B3B400B8AD40 /* CalendarTableViewCell.m */; };
+		CB990E2A1F31D80100B8AD40 /* PlatformDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990E291F31D80100B8AD40 /* PlatformDetailViewController.m */; };
+		CB990E2D1F32B1BE00B8AD40 /* PlatformDetailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990E2C1F32B1BE00B8AD40 /* PlatformDetailHelper.m */; };
+		CB990E321F32F6A500B8AD40 /* DetailPlatformCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990E301F32F6A500B8AD40 /* DetailPlatformCell.m */; };
+		CB990E331F32F6A500B8AD40 /* DetailPlatformCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB990E311F32F6A500B8AD40 /* DetailPlatformCell.xib */; };
+		CB990E371F330F7500B8AD40 /* TextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990E351F330F7500B8AD40 /* TextViewTableViewCell.m */; };
+		CBD9F1A51F3403F50074FB35 /* PriceDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9F1A41F3403F50074FB35 /* PriceDetailTableViewCell.m */; };
+		CBD9F1A91F346E510074FB35 /* PriceDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9F1A71F346E510074FB35 /* PriceDetailCell.m */; };
+		CBD9F1AA1F346E510074FB35 /* PriceDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD9F1A81F346E510074FB35 /* PriceDetailCell.xib */; };
+		CBD9F1AE1F359A680074FB35 /* PayDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9F1AD1F359A680074FB35 /* PayDetailViewController.m */; };
+		CBD9F1B31F35A0B20074FB35 /* PayOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9F1B11F35A0B20074FB35 /* PayOrderTableViewCell.m */; };
+		CBD9F1B41F35A0B20074FB35 /* PayOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD9F1B21F35A0B20074FB35 /* PayOrderTableViewCell.xib */; };
+		CBD9F1B71F35A13C0074FB35 /* CasesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9F1B61F35A13C0074FB35 /* CasesHelper.m */; };
+		CBD9F1BC1F35A23A0074FB35 /* CasesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9F1BA1F35A23A0074FB35 /* CasesTableViewCell.m */; };
+		CBD9F1BD1F35A23A0074FB35 /* CasesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD9F1BB1F35A23A0074FB35 /* CasesTableViewCell.xib */; };
+		CBD9F1C11F35A5E20074FB35 /* AddCasesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9F1C01F35A5E20074FB35 /* AddCasesViewController.m */; };
+		CBD9F1C41F35A6950074FB35 /* AddCasesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9F1C31F35A6950074FB35 /* AddCasesHelper.m */; };
 		CBE3B41C1F28237300E47D54 /* CasesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3B41B1F28237300E47D54 /* CasesViewController.m */; };
 		CBE3B41F1F28237E00E47D54 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3B41E1F28237E00E47D54 /* HomeViewController.m */; };
 		CBE3B4221F28238700E47D54 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3B4211F28238700E47D54 /* MessageViewController.m */; };
@@ -102,6 +147,21 @@
 		CB0462D31F2F1FFD00133A19 /* ProjectPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectPopView.m; sourceTree = "<group>"; };
 		CB0462D81F2F215F00133A19 /* ProjectPopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectPopCell.h; sourceTree = "<group>"; };
 		CB0462D91F2F215F00133A19 /* ProjectPopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectPopCell.m; sourceTree = "<group>"; };
+		CB0462DB1F30132D00133A19 /* ShoppingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingHelper.h; sourceTree = "<group>"; };
+		CB0462DC1F30132D00133A19 /* ShoppingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingHelper.m; sourceTree = "<group>"; };
+		CB0462DF1F3014AD00133A19 /* ShoppingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingModel.h; sourceTree = "<group>"; };
+		CB0462E01F3014AD00133A19 /* ShoppingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingModel.m; sourceTree = "<group>"; };
+		CB0462E21F301A7700133A19 /* ShoppingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingTableViewCell.h; sourceTree = "<group>"; };
+		CB0462E31F301A7700133A19 /* ShoppingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingTableViewCell.m; sourceTree = "<group>"; };
+		CB0462E41F301A7700133A19 /* ShoppingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingTableViewCell.xib; sourceTree = "<group>"; };
+		CB0462E81F3025D200133A19 /* ShoppingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingView.h; sourceTree = "<group>"; };
+		CB0462E91F3025D200133A19 /* ShoppingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingView.m; sourceTree = "<group>"; };
+		CB0462EB1F30302A00133A19 /* ShoppingPopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingPopCell.h; sourceTree = "<group>"; };
+		CB0462EC1F30302A00133A19 /* ShoppingPopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingPopCell.m; sourceTree = "<group>"; };
+		CB0462EE1F30671100133A19 /* UIView+Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Controller.h"; sourceTree = "<group>"; };
+		CB0462EF1F30671100133A19 /* UIView+Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Controller.m"; sourceTree = "<group>"; };
+		CB0462F11F306B4800133A19 /* TotalPriceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalPriceModel.h; sourceTree = "<group>"; };
+		CB0462F21F306B4800133A19 /* TotalPriceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalPriceModel.m; sourceTree = "<group>"; };
 		CB120D531F271DCE0091477C /* GoodMedical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodMedical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB120D571F271DCE0091477C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CB120D591F271DCE0091477C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +181,75 @@
 		CB120D941F2727AE0091477C /* pch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pch.pch; sourceTree = "<group>"; };
 		CB120DD61F2746080091477C /* ZHTabBarControllerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHTabBarControllerConfig.h; path = ../../ZHTabBarControllerConfig.h; sourceTree = "<group>"; };
 		CB120DD71F2746080091477C /* ZHTabBarControllerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHTabBarControllerConfig.m; path = ../../ZHTabBarControllerConfig.m; sourceTree = "<group>"; };
+		CB990D841F3169A100B8AD40 /* BSLCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLCalendar.h; sourceTree = "<group>"; };
+		CB990D851F3169A100B8AD40 /* BSLCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLCalendar.m; sourceTree = "<group>"; };
+		CB990D871F3169A100B8AD40 /* BSLMonthCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLMonthCollectionView.h; sourceTree = "<group>"; };
+		CB990D881F3169A100B8AD40 /* BSLMonthCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLMonthCollectionView.m; sourceTree = "<group>"; };
+		CB990D891F3169A100B8AD40 /* CalendaDaysCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendaDaysCell.h; sourceTree = "<group>"; };
+		CB990D8A1F3169A100B8AD40 /* CalendaDaysCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendaDaysCell.m; sourceTree = "<group>"; };
+		CB990D8B1F3169A100B8AD40 /* WeeksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeeksView.h; sourceTree = "<group>"; };
+		CB990D8C1F3169A100B8AD40 /* WeeksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeeksView.m; sourceTree = "<group>"; };
+		CB990D8E1F3169A100B8AD40 /* MonthOpeartion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthOpeartion.h; sourceTree = "<group>"; };
+		CB990D8F1F3169A100B8AD40 /* MonthOpeartion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthOpeartion.m; sourceTree = "<group>"; };
+		CB990D901F3169A100B8AD40 /* NSDate+Decomposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Decomposer.h"; sourceTree = "<group>"; };
+		CB990D911F3169A100B8AD40 /* NSDate+Decomposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Decomposer.m"; sourceTree = "<group>"; };
+		CB990D931F3169A100B8AD40 /* CalendarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarModel.h; sourceTree = "<group>"; };
+		CB990D941F3169A100B8AD40 /* CalendarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarModel.m; sourceTree = "<group>"; };
+		CB990DB31F31756E00B8AD40 /* HomeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHelper.h; sourceTree = "<group>"; };
+		CB990DB41F31756E00B8AD40 /* HomeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHelper.m; sourceTree = "<group>"; };
+		CB990DB91F3177E200B8AD40 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
+		CB990DBA1F3177E200B8AD40 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
+		CB990DEB1F318ABF00B8AD40 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		CB990DEC1F318ABF00B8AD40 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		CB990DED1F318ABF00B8AD40 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		CB990DEE1F318ABF00B8AD40 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		CB990DEF1F318ABF00B8AD40 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		CB990DF01F318ABF00B8AD40 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		CB990DF11F318ABF00B8AD40 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		CB990DF21F318ABF00B8AD40 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		CB990DF31F318ABF00B8AD40 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		CB990DF41F318ABF00B8AD40 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		CB990DF51F318ABF00B8AD40 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		CB990DF61F318ABF00B8AD40 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		CB990DF71F318ABF00B8AD40 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		CB990DF81F318ABF00B8AD40 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		CB990E181F31AA9200B8AD40 /* PlatformeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformeViewController.h; sourceTree = "<group>"; };
+		CB990E191F31AA9200B8AD40 /* PlatformeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformeViewController.m; sourceTree = "<group>"; };
+		CB990E1C1F31AC0100B8AD40 /* PlatformeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformeHelper.h; sourceTree = "<group>"; };
+		CB990E1D1F31AC0100B8AD40 /* PlatformeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformeHelper.m; sourceTree = "<group>"; };
+		CB990E1F1F31AEF500B8AD40 /* MapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableViewCell.h; sourceTree = "<group>"; };
+		CB990E201F31AEF500B8AD40 /* MapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTableViewCell.m; sourceTree = "<group>"; };
+		CB990E211F31AEF500B8AD40 /* MapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
+		CB990E241F31B3B400B8AD40 /* CalendarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarTableViewCell.h; sourceTree = "<group>"; };
+		CB990E251F31B3B400B8AD40 /* CalendarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarTableViewCell.m; sourceTree = "<group>"; };
+		CB990E281F31D80100B8AD40 /* PlatformDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformDetailViewController.h; sourceTree = "<group>"; };
+		CB990E291F31D80100B8AD40 /* PlatformDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformDetailViewController.m; sourceTree = "<group>"; };
+		CB990E2B1F32B1BE00B8AD40 /* PlatformDetailHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformDetailHelper.h; sourceTree = "<group>"; };
+		CB990E2C1F32B1BE00B8AD40 /* PlatformDetailHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformDetailHelper.m; sourceTree = "<group>"; };
+		CB990E2F1F32F6A500B8AD40 /* DetailPlatformCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPlatformCell.h; sourceTree = "<group>"; };
+		CB990E301F32F6A500B8AD40 /* DetailPlatformCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPlatformCell.m; sourceTree = "<group>"; };
+		CB990E311F32F6A500B8AD40 /* DetailPlatformCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailPlatformCell.xib; sourceTree = "<group>"; };
+		CB990E341F330F7500B8AD40 /* TextViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewTableViewCell.h; sourceTree = "<group>"; };
+		CB990E351F330F7500B8AD40 /* TextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewTableViewCell.m; sourceTree = "<group>"; };
+		CBD9F1A31F3403F50074FB35 /* PriceDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceDetailTableViewCell.h; sourceTree = "<group>"; };
+		CBD9F1A41F3403F50074FB35 /* PriceDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceDetailTableViewCell.m; sourceTree = "<group>"; };
+		CBD9F1A61F346E510074FB35 /* PriceDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceDetailCell.h; sourceTree = "<group>"; };
+		CBD9F1A71F346E510074FB35 /* PriceDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceDetailCell.m; sourceTree = "<group>"; };
+		CBD9F1A81F346E510074FB35 /* PriceDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceDetailCell.xib; sourceTree = "<group>"; };
+		CBD9F1AC1F359A680074FB35 /* PayDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayDetailViewController.h; sourceTree = "<group>"; };
+		CBD9F1AD1F359A680074FB35 /* PayDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayDetailViewController.m; sourceTree = "<group>"; };
+		CBD9F1B01F35A0B20074FB35 /* PayOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayOrderTableViewCell.h; sourceTree = "<group>"; };
+		CBD9F1B11F35A0B20074FB35 /* PayOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayOrderTableViewCell.m; sourceTree = "<group>"; };
+		CBD9F1B21F35A0B20074FB35 /* PayOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayOrderTableViewCell.xib; sourceTree = "<group>"; };
+		CBD9F1B51F35A13C0074FB35 /* CasesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CasesHelper.h; sourceTree = "<group>"; };
+		CBD9F1B61F35A13C0074FB35 /* CasesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasesHelper.m; sourceTree = "<group>"; };
+		CBD9F1B91F35A23A0074FB35 /* CasesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CasesTableViewCell.h; sourceTree = "<group>"; };
+		CBD9F1BA1F35A23A0074FB35 /* CasesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasesTableViewCell.m; sourceTree = "<group>"; };
+		CBD9F1BB1F35A23A0074FB35 /* CasesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CasesTableViewCell.xib; sourceTree = "<group>"; };
+		CBD9F1BF1F35A5E20074FB35 /* AddCasesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCasesViewController.h; sourceTree = "<group>"; };
+		CBD9F1C01F35A5E20074FB35 /* AddCasesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCasesViewController.m; sourceTree = "<group>"; };
+		CBD9F1C21F35A6950074FB35 /* AddCasesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCasesHelper.h; sourceTree = "<group>"; };
+		CBD9F1C31F35A6950074FB35 /* AddCasesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCasesHelper.m; sourceTree = "<group>"; };
 		CBE3B41A1F28237300E47D54 /* CasesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CasesViewController.h; sourceTree = "<group>"; };
 		CBE3B41B1F28237300E47D54 /* CasesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasesViewController.m; sourceTree = "<group>"; };
 		CBE3B41D1F28237E00E47D54 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -283,6 +412,28 @@
 			name = ProjectScrollCell;
 			sourceTree = "<group>";
 		};
+		CB0462DE1F30149100133A19 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CB0462DF1F3014AD00133A19 /* ShoppingModel.h */,
+				CB0462E01F3014AD00133A19 /* ShoppingModel.m */,
+				CB0462F11F306B4800133A19 /* TotalPriceModel.h */,
+				CB0462F21F306B4800133A19 /* TotalPriceModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		CB0462E71F3025AE00133A19 /* ShoppingCell */ = {
+			isa = PBXGroup;
+			children = (
+				CB0462E81F3025D200133A19 /* ShoppingView.h */,
+				CB0462E91F3025D200133A19 /* ShoppingView.m */,
+				CB0462EB1F30302A00133A19 /* ShoppingPopCell.h */,
+				CB0462EC1F30302A00133A19 /* ShoppingPopCell.m */,
+			);
+			name = ShoppingCell;
+			sourceTree = "<group>";
+		};
 		CB120D4A1F271DCE0091477C = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +522,8 @@
 		CB120D8B1F271F180091477C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CB0462EE1F30671100133A19 /* UIView+Controller.h */,
+				CB0462EF1F30671100133A19 /* UIView+Controller.m */,
 				CBE3B5361F2C3AC000E47D54 /* NSDate+util.h */,
 				CBE3B5371F2C3AC000E47D54 /* NSDate+util.m */,
 				CBE3B5331F2C273000E47D54 /* NSObject+Astray.h */,
@@ -409,8 +562,12 @@
 		CB120D8F1F2727270091477C /* Cases */ = {
 			isa = PBXGroup;
 			children = (
+				CBD9F1BE1F35A5CC0074FB35 /* AddCases */,
+				CBD9F1B81F35A2280074FB35 /* view */,
 				CBE3B41A1F28237300E47D54 /* CasesViewController.h */,
 				CBE3B41B1F28237300E47D54 /* CasesViewController.m */,
+				CBD9F1B51F35A13C0074FB35 /* CasesHelper.h */,
+				CBD9F1B61F35A13C0074FB35 /* CasesHelper.m */,
 			);
 			path = Cases;
 			sourceTree = "<group>";
@@ -418,8 +575,15 @@
 		CB120D901F2727270091477C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CBD9F1AB1F359A4F0074FB35 /* PayDetail */,
+				CB990E271F31D7D600B8AD40 /* PlatformDetail */,
+				CB990E171F31AA3C00B8AD40 /* PlatformAppointment */,
 				CBE3B41D1F28237E00E47D54 /* HomeViewController.h */,
 				CBE3B41E1F28237E00E47D54 /* HomeViewController.m */,
+				CB990DB31F31756E00B8AD40 /* HomeHelper.h */,
+				CB990DB41F31756E00B8AD40 /* HomeHelper.m */,
+				CB990DB91F3177E200B8AD40 /* HomeCollectionViewCell.h */,
+				CB990DBA1F3177E200B8AD40 /* HomeCollectionViewCell.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -442,6 +606,174 @@
 			path = Mine;
 			sourceTree = "<group>";
 		};
+		CB990D831F3169A100B8AD40 /* BSLCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				CB990D841F3169A100B8AD40 /* BSLCalendar.h */,
+				CB990D851F3169A100B8AD40 /* BSLCalendar.m */,
+				CB990D861F3169A100B8AD40 /* ControlsView */,
+				CB990D8D1F3169A100B8AD40 /* Manager */,
+				CB990D921F3169A100B8AD40 /* Model */,
+			);
+			path = BSLCalendar;
+			sourceTree = "<group>";
+		};
+		CB990D861F3169A100B8AD40 /* ControlsView */ = {
+			isa = PBXGroup;
+			children = (
+				CB990D871F3169A100B8AD40 /* BSLMonthCollectionView.h */,
+				CB990D881F3169A100B8AD40 /* BSLMonthCollectionView.m */,
+				CB990D891F3169A100B8AD40 /* CalendaDaysCell.h */,
+				CB990D8A1F3169A100B8AD40 /* CalendaDaysCell.m */,
+				CB990D8B1F3169A100B8AD40 /* WeeksView.h */,
+				CB990D8C1F3169A100B8AD40 /* WeeksView.m */,
+			);
+			path = ControlsView;
+			sourceTree = "<group>";
+		};
+		CB990D8D1F3169A100B8AD40 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CB990D8E1F3169A100B8AD40 /* MonthOpeartion.h */,
+				CB990D8F1F3169A100B8AD40 /* MonthOpeartion.m */,
+				CB990D901F3169A100B8AD40 /* NSDate+Decomposer.h */,
+				CB990D911F3169A100B8AD40 /* NSDate+Decomposer.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		CB990D921F3169A100B8AD40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB990D931F3169A100B8AD40 /* CalendarModel.h */,
+				CB990D941F3169A100B8AD40 /* CalendarModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB990DE91F318ABF00B8AD40 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				CB990DEA1F318ABF00B8AD40 /* PageControl */,
+				CB990DF31F318ABF00B8AD40 /* SDCollectionViewCell.h */,
+				CB990DF41F318ABF00B8AD40 /* SDCollectionViewCell.m */,
+				CB990DF51F318ABF00B8AD40 /* SDCycleScrollView.h */,
+				CB990DF61F318ABF00B8AD40 /* SDCycleScrollView.m */,
+				CB990DF71F318ABF00B8AD40 /* UIView+SDExtension.h */,
+				CB990DF81F318ABF00B8AD40 /* UIView+SDExtension.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		CB990DEA1F318ABF00B8AD40 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				CB990DEB1F318ABF00B8AD40 /* TAAbstractDotView.h */,
+				CB990DEC1F318ABF00B8AD40 /* TAAbstractDotView.m */,
+				CB990DED1F318ABF00B8AD40 /* TAAnimatedDotView.h */,
+				CB990DEE1F318ABF00B8AD40 /* TAAnimatedDotView.m */,
+				CB990DEF1F318ABF00B8AD40 /* TADotView.h */,
+				CB990DF01F318ABF00B8AD40 /* TADotView.m */,
+				CB990DF11F318ABF00B8AD40 /* TAPageControl.h */,
+				CB990DF21F318ABF00B8AD40 /* TAPageControl.m */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		CB990E171F31AA3C00B8AD40 /* PlatformAppointment */ = {
+			isa = PBXGroup;
+			children = (
+				CB990E1B1F31AB7500B8AD40 /* view */,
+				CB990E181F31AA9200B8AD40 /* PlatformeViewController.h */,
+				CB990E191F31AA9200B8AD40 /* PlatformeViewController.m */,
+			);
+			name = PlatformAppointment;
+			sourceTree = "<group>";
+		};
+		CB990E1B1F31AB7500B8AD40 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CB990E1C1F31AC0100B8AD40 /* PlatformeHelper.h */,
+				CB990E1D1F31AC0100B8AD40 /* PlatformeHelper.m */,
+				CB990E1F1F31AEF500B8AD40 /* MapTableViewCell.h */,
+				CB990E201F31AEF500B8AD40 /* MapTableViewCell.m */,
+				CB990E211F31AEF500B8AD40 /* MapTableViewCell.xib */,
+				CB990E241F31B3B400B8AD40 /* CalendarTableViewCell.h */,
+				CB990E251F31B3B400B8AD40 /* CalendarTableViewCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CB990E271F31D7D600B8AD40 /* PlatformDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CB990E2E1F32F67F00B8AD40 /* view */,
+				CB990E281F31D80100B8AD40 /* PlatformDetailViewController.h */,
+				CB990E291F31D80100B8AD40 /* PlatformDetailViewController.m */,
+				CB990E2B1F32B1BE00B8AD40 /* PlatformDetailHelper.h */,
+				CB990E2C1F32B1BE00B8AD40 /* PlatformDetailHelper.m */,
+			);
+			name = PlatformDetail;
+			sourceTree = "<group>";
+		};
+		CB990E2E1F32F67F00B8AD40 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CB990E2F1F32F6A500B8AD40 /* DetailPlatformCell.h */,
+				CB990E301F32F6A500B8AD40 /* DetailPlatformCell.m */,
+				CB990E311F32F6A500B8AD40 /* DetailPlatformCell.xib */,
+				CB990E341F330F7500B8AD40 /* TextViewTableViewCell.h */,
+				CB990E351F330F7500B8AD40 /* TextViewTableViewCell.m */,
+				CBD9F1A31F3403F50074FB35 /* PriceDetailTableViewCell.h */,
+				CBD9F1A41F3403F50074FB35 /* PriceDetailTableViewCell.m */,
+				CBD9F1A61F346E510074FB35 /* PriceDetailCell.h */,
+				CBD9F1A71F346E510074FB35 /* PriceDetailCell.m */,
+				CBD9F1A81F346E510074FB35 /* PriceDetailCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CBD9F1AB1F359A4F0074FB35 /* PayDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CBD9F1AF1F359DEC0074FB35 /* view */,
+				CBD9F1AC1F359A680074FB35 /* PayDetailViewController.h */,
+				CBD9F1AD1F359A680074FB35 /* PayDetailViewController.m */,
+			);
+			name = PayDetail;
+			sourceTree = "<group>";
+		};
+		CBD9F1AF1F359DEC0074FB35 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CBD9F1B01F35A0B20074FB35 /* PayOrderTableViewCell.h */,
+				CBD9F1B11F35A0B20074FB35 /* PayOrderTableViewCell.m */,
+				CBD9F1B21F35A0B20074FB35 /* PayOrderTableViewCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CBD9F1B81F35A2280074FB35 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CBD9F1B91F35A23A0074FB35 /* CasesTableViewCell.h */,
+				CBD9F1BA1F35A23A0074FB35 /* CasesTableViewCell.m */,
+				CBD9F1BB1F35A23A0074FB35 /* CasesTableViewCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CBD9F1BE1F35A5CC0074FB35 /* AddCases */ = {
+			isa = PBXGroup;
+			children = (
+				CBD9F1BF1F35A5E20074FB35 /* AddCasesViewController.h */,
+				CBD9F1C01F35A5E20074FB35 /* AddCasesViewController.m */,
+				CBD9F1C21F35A6950074FB35 /* AddCasesHelper.h */,
+				CBD9F1C31F35A6950074FB35 /* AddCasesHelper.m */,
+			);
+			name = AddCases;
+			sourceTree = "<group>";
+		};
 		CBE3B4291F28320300E47D54 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +791,9 @@
 		CBE3B42F1F28741B00E47D54 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				CB990DE91F318ABF00B8AD40 /* SDCycleScrollView */,
+				CB990D831F3169A100B8AD40 /* BSLCalendar */,
+				CB0462E71F3025AE00133A19 /* ShoppingCell */,
 				CB0462CE1F2F1F3300133A19 /* ProjectScrollCell */,
 				CB0462C21F2EC23600133A19 /* PeriodTime */,
 				CBE3B5391F2C645300E47D54 /* OperationProjectCell */,
@@ -539,6 +874,7 @@
 		CBE3B4831F2894B500E47D54 /* PopView */ = {
 			isa = PBXGroup;
 			children = (
+				CB0462DE1F30149100133A19 /* model */,
 				CBE3B48E1F2B24A500E47D54 /* view */,
 				CBE3B4881F2B10EB00E47D54 /* LeftHelper.h */,
 				CBE3B4891F2B10EB00E47D54 /* LeftHelper.m */,
@@ -546,6 +882,8 @@
 				CBE3B48C1F2B1BE500E47D54 /* ClassificationHelper.m */,
 				CB0462CB1F2F162200133A19 /* ProjectScrollView.h */,
 				CB0462CC1F2F162200133A19 /* ProjectScrollView.m */,
+				CB0462DB1F30132D00133A19 /* ShoppingHelper.h */,
+				CB0462DC1F30132D00133A19 /* ShoppingHelper.m */,
 			);
 			name = PopView;
 			sourceTree = "<group>";
@@ -559,6 +897,9 @@
 				CBE3B5461F2C8F7500E47D54 /* OperationTableViewCell.h */,
 				CBE3B5471F2C8F7500E47D54 /* OperationTableViewCell.m */,
 				CBE3B5481F2C8F7500E47D54 /* OperationTableViewCell.xib */,
+				CB0462E21F301A7700133A19 /* ShoppingTableViewCell.h */,
+				CB0462E31F301A7700133A19 /* ShoppingTableViewCell.m */,
+				CB0462E41F301A7700133A19 /* ShoppingTableViewCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -704,11 +1045,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBE3B4931F2B24C400E47D54 /* LeftTableViewCell.xib in Resources */,
+				CB990E331F32F6A500B8AD40 /* DetailPlatformCell.xib in Resources */,
+				CBD9F1AA1F346E510074FB35 /* PriceDetailCell.xib in Resources */,
 				CB120D661F271DCE0091477C /* LaunchScreen.storyboard in Resources */,
+				CBD9F1B41F35A0B20074FB35 /* PayOrderTableViewCell.xib in Resources */,
+				CBD9F1BD1F35A23A0074FB35 /* CasesTableViewCell.xib in Resources */,
 				CBE3B4691F28748A00E47D54 /* TZImagePickerController.bundle in Resources */,
 				CB120D631F271DCE0091477C /* Assets.xcassets in Resources */,
 				CB120D611F271DCE0091477C /* Main.storyboard in Resources */,
 				CBE3B54A1F2C8F7500E47D54 /* OperationTableViewCell.xib in Resources */,
+				CB990E231F31AEF500B8AD40 /* MapTableViewCell.xib in Resources */,
+				CB0462E61F301A7700133A19 /* ShoppingTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,60 +1128,99 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD9F1BC1F35A23A0074FB35 /* CasesTableViewCell.m in Sources */,
+				CB990D991F3169A100B8AD40 /* MonthOpeartion.m in Sources */,
 				CBE3B4921F2B24C400E47D54 /* LeftTableViewCell.m in Sources */,
 				CBE3B52B1F2C265E00E47D54 /* ZHPickerCell.m in Sources */,
 				CB120D5E1F271DCE0091477C /* ViewController.m in Sources */,
 				CB120D5B1F271DCE0091477C /* AppDelegate.m in Sources */,
 				CBE3B41C1F28237300E47D54 /* CasesViewController.m in Sources */,
 				CBE3B4661F28748A00E47D54 /* TZAssetModel.m in Sources */,
+				CB990E321F32F6A500B8AD40 /* DetailPlatformCell.m in Sources */,
+				CB990DFE1F318ABF00B8AD40 /* SDCycleScrollView.m in Sources */,
 				CB0462C51F2EC27300133A19 /* PeriodTimeView.m in Sources */,
+				CB990DFA1F318ABF00B8AD40 /* TAAnimatedDotView.m in Sources */,
 				CBE3B4441F28744E00E47D54 /* UIControl+CYLTabBarControllerExtention.m in Sources */,
+				CB990D9A1F3169A100B8AD40 /* NSDate+Decomposer.m in Sources */,
+				CB990DFC1F318ABF00B8AD40 /* TAPageControl.m in Sources */,
 				CBE3B5351F2C273000E47D54 /* NSObject+Astray.m in Sources */,
 				CBE3B4281F2829F700E47D54 /* BaseCMViewController.m in Sources */,
 				CB120DD81F2746080091477C /* ZHTabBarControllerConfig.m in Sources */,
 				CBE3B46A1F28748A00E47D54 /* TZImagePickerController.m in Sources */,
 				CBE3B52C1F2C265E00E47D54 /* ZHDateCell.m in Sources */,
 				CB0462D41F2F1FFD00133A19 /* ProjectPopView.m in Sources */,
+				CB990E1A1F31AA9200B8AD40 /* PlatformeViewController.m in Sources */,
+				CB990E2D1F32B1BE00B8AD40 /* PlatformDetailHelper.m in Sources */,
 				CBE3B4651F28748A00E47D54 /* TZAssetCell.m in Sources */,
 				CBE3B4771F28751500E47D54 /* ZHNetWorking.m in Sources */,
+				CBD9F1AE1F359A680074FB35 /* PayDetailViewController.m in Sources */,
 				CBE3B46E1F28748A00E47D54 /* TZProgressView.m in Sources */,
 				CB0462DA1F2F215F00133A19 /* ProjectPopCell.m in Sources */,
 				CBE3B4641F28748A00E47D54 /* NSBundle+TZImagePicker.m in Sources */,
 				CBE3B5491F2C8F7500E47D54 /* OperationTableViewCell.m in Sources */,
+				CB990E1E1F31AC0100B8AD40 /* PlatformeHelper.m in Sources */,
 				CBE3B46B1F28748A00E47D54 /* TZPhotoPickerController.m in Sources */,
 				CBE3B5291F2C265E00E47D54 /* BaseTableViewCell.m in Sources */,
 				CBE3B4681F28748A00E47D54 /* TZImageManager.m in Sources */,
+				CB990E221F31AEF500B8AD40 /* MapTableViewCell.m in Sources */,
+				CB990DFB1F318ABF00B8AD40 /* TADotView.m in Sources */,
+				CB990DB51F31756E00B8AD40 /* HomeHelper.m in Sources */,
+				CB990D9B1F3169A100B8AD40 /* CalendarModel.m in Sources */,
 				CBE3B4471F28744E00E47D54 /* UIViewController+CYLTabBarControllerExtention.m in Sources */,
 				CBE3B4701F28748A00E47D54 /* TZVideoPlayerController.m in Sources */,
 				CBE3B48A1F2B10EB00E47D54 /* LeftHelper.m in Sources */,
+				CB0462EA1F3025D200133A19 /* ShoppingView.m in Sources */,
 				CBE3B4741F2874B800E47D54 /* ZHHud.m in Sources */,
+				CB0462ED1F30302A00133A19 /* ShoppingPopCell.m in Sources */,
+				CB0462E11F3014AD00133A19 /* ShoppingModel.m in Sources */,
+				CBD9F1C41F35A6950074FB35 /* AddCasesHelper.m in Sources */,
 				CBE3B5421F2C671700E47D54 /* TestTableViewController.m in Sources */,
+				CBD9F1B71F35A13C0074FB35 /* CasesHelper.m in Sources */,
 				CBE3B4451F28744E00E47D54 /* UITabBarItem+CYLTabBarControllerExtention.m in Sources */,
 				CBE3B43B1F28743600E47D54 /* CYLTabBarController.m in Sources */,
+				CBD9F1A51F3403F50074FB35 /* PriceDetailTableViewCell.m in Sources */,
+				CB0462E51F301A7700133A19 /* ShoppingTableViewCell.m in Sources */,
 				CBE3B4251F28239100E47D54 /* MineViewController.m in Sources */,
 				CBE3B48D1F2B1BE500E47D54 /* ClassificationHelper.m in Sources */,
 				CBE3B46D1F28748A00E47D54 /* TZPhotoPreviewController.m in Sources */,
+				CB990D971F3169A100B8AD40 /* CalendaDaysCell.m in Sources */,
+				CB990DBB1F3177E200B8AD40 /* HomeCollectionViewCell.m in Sources */,
+				CB990E371F330F7500B8AD40 /* TextViewTableViewCell.m in Sources */,
 				CBE3B4861F2894E400E47D54 /* BasePopView.m in Sources */,
 				CBE3B4461F28744E00E47D54 /* UIView+CYLTabBarControllerExtention.m in Sources */,
+				CBD9F1A91F346E510074FB35 /* PriceDetailCell.m in Sources */,
 				CB0462C91F2EFED300133A19 /* PeriodCollectionViewCell.m in Sources */,
+				CB0462F31F306B4800133A19 /* TotalPriceModel.m in Sources */,
 				CBE3B4221F28238700E47D54 /* MessageViewController.m in Sources */,
 				CB120D581F271DCE0091477C /* main.m in Sources */,
 				CBE3B5381F2C3AC000E47D54 /* NSDate+util.m in Sources */,
+				CB990E261F31B3B400B8AD40 /* CalendarTableViewCell.m in Sources */,
+				CB990E2A1F31D80100B8AD40 /* PlatformDetailViewController.m in Sources */,
+				CB990D981F3169A100B8AD40 /* WeeksView.m in Sources */,
+				CB990DF91F318ABF00B8AD40 /* TAAbstractDotView.m in Sources */,
 				CBE3B44A1F28746E00E47D54 /* UIView+Layout.m in Sources */,
+				CBD9F1B31F35A0B20074FB35 /* PayOrderTableViewCell.m in Sources */,
 				CBE3B4391F28743600E47D54 /* CYLPlusButton.m in Sources */,
 				CBE3B47A1F28763500E47D54 /* CYLPlusButtonSubclass.m in Sources */,
+				CB0462F01F30671100133A19 /* UIView+Controller.m in Sources */,
 				CBE3B5311F2C26EB00E47D54 /* InputTableViewCell.m in Sources */,
 				CBE3B5451F2C776B00E47D54 /* OperationView.m in Sources */,
 				CBE3B4671F28748A00E47D54 /* TZImageCropManager.m in Sources */,
+				CB990D951F3169A100B8AD40 /* BSLCalendar.m in Sources */,
+				CB990D961F3169A100B8AD40 /* BSLMonthCollectionView.m in Sources */,
 				CBE3B5321F2C26EB00E47D54 /* SubjectTableViewCell.m in Sources */,
 				CBE3B52A1F2C265E00E47D54 /* ZHFormActionCell.m in Sources */,
 				CBE3B46F1F28748A00E47D54 /* TZTestCell.m in Sources */,
 				CBE3B53C1F2C656200E47D54 /* OperationProjectCell.m in Sources */,
+				CB990DFD1F318ABF00B8AD40 /* SDCollectionViewCell.m in Sources */,
+				CB990DFF1F318ABF00B8AD40 /* UIView+SDExtension.m in Sources */,
 				CB0462CD1F2F162200133A19 /* ProjectScrollView.m in Sources */,
 				CBE3B43A1F28743600E47D54 /* CYLTabBar.m in Sources */,
 				CBE3B47D1F28765500E47D54 /* CenterPopView.m in Sources */,
 				CBE3B41F1F28237E00E47D54 /* HomeViewController.m in Sources */,
 				CBE3B46C1F28748A00E47D54 /* TZPhotoPreviewCell.m in Sources */,
+				CBD9F1C11F35A5E20074FB35 /* AddCasesViewController.m in Sources */,
+				CB0462DD1F30132D00133A19 /* ShoppingHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

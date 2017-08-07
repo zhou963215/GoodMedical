@@ -22,9 +22,9 @@
     
     [CYLPlusButtonSubclass registerPlusButton];
 
-//    ZHTabBarControllerConfig * tabBarcontrollerConfig = [[ZHTabBarControllerConfig alloc]init];
-//    self.window.rootViewController = tabBarcontrollerConfig.tabBarController;
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[TestTableViewController new]];
+    ZHTabBarControllerConfig * tabBarcontrollerConfig = [[ZHTabBarControllerConfig alloc]init];
+    self.window.rootViewController = tabBarcontrollerConfig.tabBarController;
+//    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[TestTableViewController new]];
     
     
     

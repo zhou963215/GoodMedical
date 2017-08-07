@@ -8,6 +8,7 @@
 
 #import "ProjectPopCell.h"
 #import "ProjectPopView.h"
+#import "TotalPriceModel.h"
 @implementation ProjectPopCell
 
 - (instancetype)init {
@@ -43,7 +44,12 @@
     if (self.disabled) {
         return;
     }
-    
+    UIView *superView = self.superview;
+    while(![superView isMemberOfClass:[UITableView class]]){
+        superView = superView.superview;
+    }
+    [superView endEditing:YES];
+
     ProjectPopView * op = [[ProjectPopView alloc]initAlertViewHeight:300];
     
     if (self.label.text.length > 0) {
@@ -58,11 +64,7 @@
         
         self.label.text = dict[@"name"];
         self.values = @[dict[@"name"]];
-        
     };
-    
-    
-//    [[UIApplication sharedApplication].delegate.window addSubview:op];
     
     
 }

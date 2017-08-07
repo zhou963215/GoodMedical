@@ -11,6 +11,8 @@
 #import <UIKit/UIKit.h>
 #import <Masonry/Masonry.h>
 #import "ZHHud.h"
+#import "UIView+Controller.h"
+#import <YYKit/YYKit.h>
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 
@@ -20,6 +22,8 @@
 
 #define WEAKSELF(weakSelf)      __weak __typeof(&*self)weakSelf = self;
 
+
+#define GAYCOLOR   UICOLORRGB(0xf5f5f5);
 
 
 
