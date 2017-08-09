@@ -10,6 +10,8 @@
 #define Url_h
 
 #define BASEURL                      @"http://api.yimeiq.cn/"
+#define TOKEN                        @"2b6f8cbb42c7653bdad50fcbcee12417"
+#define PHOTO_BEFOR                  @"http://uploads.zm.yimeiq.cn/"
 
 //短信
 #define SMS_MODULE                   BASEURL@"sms"

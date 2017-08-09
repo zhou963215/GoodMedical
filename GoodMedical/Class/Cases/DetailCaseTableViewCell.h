@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailCaseTableViewCell : UITableViewCell
+@interface CasesImageView : UIView
 
+@end
+
+@interface CasesCoentView : UIView
+
+@end
+
+@interface DetailCaseTableViewCell : UITableViewCell
+- (void)upDataWithModel:(NSDictionary *)dict;
 @end

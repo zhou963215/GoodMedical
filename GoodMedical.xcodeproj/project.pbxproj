@@ -118,6 +118,7 @@
 		CBE3B5451F2C776B00E47D54 /* OperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3B5441F2C776B00E47D54 /* OperationView.m */; };
 		CBE3B5491F2C8F7500E47D54 /* OperationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3B5471F2C8F7500E47D54 /* OperationTableViewCell.m */; };
 		CBE3B54A1F2C8F7500E47D54 /* OperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE3B5481F2C8F7500E47D54 /* OperationTableViewCell.xib */; };
+		CBFB0EFB1F3ADF810043C969 /* YYPhotoBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFB0EFA1F3ADF810043C969 /* YYPhotoBrowseView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -354,6 +355,8 @@
 		CBE3B5461F2C8F7500E47D54 /* OperationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationTableViewCell.h; sourceTree = "<group>"; };
 		CBE3B5471F2C8F7500E47D54 /* OperationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationTableViewCell.m; sourceTree = "<group>"; };
 		CBE3B5481F2C8F7500E47D54 /* OperationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OperationTableViewCell.xib; sourceTree = "<group>"; };
+		CBFB0EF91F3ADF810043C969 /* YYPhotoBrowseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYPhotoBrowseView.h; sourceTree = "<group>"; };
+		CBFB0EFA1F3ADF810043C969 /* YYPhotoBrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYPhotoBrowseView.m; sourceTree = "<group>"; };
 		D219AF41DC4C1AD141D82E2B /* Pods-GoodMedical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodMedical.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoodMedical/Pods-GoodMedical.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -760,6 +763,8 @@
 		CBC74F221F39A9D80078AD7A /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CBFB0EF91F3ADF810043C969 /* YYPhotoBrowseView.h */,
+				CBFB0EFA1F3ADF810043C969 /* YYPhotoBrowseView.m */,
 				CBC74F231F39B57B0078AD7A /* DetailCaseTableViewCell.h */,
 				CBC74F241F39B57B0078AD7A /* DetailCaseTableViewCell.m */,
 			);
@@ -1171,6 +1176,7 @@
 				CBE3B4661F28748A00E47D54 /* TZAssetModel.m in Sources */,
 				CB990E321F32F6A500B8AD40 /* DetailPlatformCell.m in Sources */,
 				CB990DFE1F318ABF00B8AD40 /* SDCycleScrollView.m in Sources */,
+				CBFB0EFB1F3ADF810043C969 /* YYPhotoBrowseView.m in Sources */,
 				CB0462C51F2EC27300133A19 /* PeriodTimeView.m in Sources */,
 				CB990DFA1F318ABF00B8AD40 /* TAAnimatedDotView.m in Sources */,
 				CBE3B4441F28744E00E47D54 /* UIControl+CYLTabBarControllerExtention.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "CasesHelper.h"
 #import "CasesTableViewCell.h"
+#import "CasesDetailViewController.h"
 @implementation CasesHelper
 
 +(instancetype)blog{
@@ -83,7 +84,8 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    
+    [self.tableView.navigationController pushViewController:[CasesDetailViewController new] animated:YES
+     ];
     
 }
 

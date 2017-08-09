@@ -8,6 +8,7 @@
 
 #import "CasesDetailHelper.h"
 #import "CasesTableViewCell.h"
+#import "DetailCaseTableViewCell.h"
 @implementation CasesDetailHelper
 
 +(instancetype)blog{
@@ -30,9 +31,10 @@
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 44;
         [self.tableView registerNib:[UINib nibWithNibName:@"CasesTableViewCell" bundle:nil] forCellReuseIdentifier:@"cases"];
+        [self.tableView registerClass:[DetailCaseTableViewCell class] forCellReuseIdentifier:@"detail"];
+        
         UIView  * view = [UIView new];
         self.tableView.tableFooterView = view;
-        
         
         
         
@@ -71,7 +73,7 @@
     }
     
     
-    return 10;
+    return _dataArray.count;
     
 }
 
@@ -83,6 +85,16 @@
         CasesTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cases"];
         
         return cell;
+    }else{
+        
+        DetailCaseTableViewCell  * cell = [tableView dequeueReusableCellWithIdentifier:@"detail"];
+        
+        NSDictionary * dict = _dataArray[indexPath.row];
+        
+        [cell upDataWithModel:dict];
+        
+        return cell;
+        
     }
     
     
