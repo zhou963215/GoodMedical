@@ -9,7 +9,7 @@
 #import "HomeHelper.h"
 #import "HomeCollectionViewCell.h"
 #import "PlatformeViewController.h"
-#import "AddCasesViewController.h"
+#import "CasesViewController.h"
 @interface HomeHelper ()
 @property(nonatomic,strong) UICollectionView * collection;
 
@@ -95,7 +95,7 @@
     switch (indexPath.row) {
         case 0:{
             //
-            [self.collection.navigationController pushViewController:[AddCasesViewController new] animated:YES];
+            [self.collection.navigationController pushViewController:[CasesViewController new] animated:YES];
         }
             break;
         case 1:{

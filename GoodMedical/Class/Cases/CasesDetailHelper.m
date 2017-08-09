@@ -1,18 +1,18 @@
 //
-//  CasesHelper.m
+//  CasesDetailHelper.m
 //  GoodMedical
 //
-//  Created by zhou on 2017/8/5.
+//  Created by zhou on 2017/8/8.
 //  Copyright © 2017年 zhou. All rights reserved.
 //
 
-#import "CasesHelper.h"
+#import "CasesDetailHelper.h"
 #import "CasesTableViewCell.h"
-@implementation CasesHelper
+@implementation CasesDetailHelper
 
 +(instancetype)blog{
     
-    return [[CasesHelper alloc]init];
+    return [[CasesDetailHelper alloc]init];
 }
 
 - (instancetype)init{
@@ -25,7 +25,7 @@
         self.tableView.dataSource = self;
         self.tableView.backgroundColor = [UIColor whiteColor];
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//        self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        //        self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
         self.tableView.separatorColor = UICOLORRGB(0xf5f5f5);
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 44;
@@ -58,10 +58,17 @@
 
 #pragma mark  tableview代理方法
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    return 2;
+}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    
+    if (section == 0) {
+        
+        return 1;
+    }
     
     
     return 10;
@@ -71,11 +78,16 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    CasesTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cases"];
+    if (indexPath.section == 0) {
+        
+        CasesTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cases"];
+        
+        return cell;
+    }
     
     
     
-    return cell;
+    return [UITableViewCell new];
     
 }
 
@@ -86,10 +98,6 @@
     
     
 }
-
-
-
-
 
 
 

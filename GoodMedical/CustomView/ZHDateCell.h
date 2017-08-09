@@ -14,9 +14,12 @@
 
 @property(nonatomic, assign) BOOL showDate;
 @property(nonatomic, assign) BOOL showTime;
-@property(nonatomic,retain)UILabel * nameLB;
+@property(nonatomic, retain)UILabel * nameLB;
 
 @property(nonatomic, copy) NSString *dateFormat;
+
+@property(nonatomic, copy) NSString * dateString;
+
 - (void)upWidthChange:(BOOL)change;
 
 @end

@@ -56,6 +56,9 @@
 		CB990E321F32F6A500B8AD40 /* DetailPlatformCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990E301F32F6A500B8AD40 /* DetailPlatformCell.m */; };
 		CB990E331F32F6A500B8AD40 /* DetailPlatformCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB990E311F32F6A500B8AD40 /* DetailPlatformCell.xib */; };
 		CB990E371F330F7500B8AD40 /* TextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990E351F330F7500B8AD40 /* TextViewTableViewCell.m */; };
+		CBC74F1E1F39A2B60078AD7A /* CasesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC74F1D1F39A2B60078AD7A /* CasesDetailViewController.m */; };
+		CBC74F211F39A2FA0078AD7A /* CasesDetailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC74F201F39A2FA0078AD7A /* CasesDetailHelper.m */; };
+		CBC74F251F39B57B0078AD7A /* DetailCaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC74F241F39B57B0078AD7A /* DetailCaseTableViewCell.m */; };
 		CBD9F1A51F3403F50074FB35 /* PriceDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9F1A41F3403F50074FB35 /* PriceDetailTableViewCell.m */; };
 		CBD9F1A91F346E510074FB35 /* PriceDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9F1A71F346E510074FB35 /* PriceDetailCell.m */; };
 		CBD9F1AA1F346E510074FB35 /* PriceDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD9F1A81F346E510074FB35 /* PriceDetailCell.xib */; };
@@ -231,6 +234,13 @@
 		CB990E311F32F6A500B8AD40 /* DetailPlatformCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailPlatformCell.xib; sourceTree = "<group>"; };
 		CB990E341F330F7500B8AD40 /* TextViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewTableViewCell.h; sourceTree = "<group>"; };
 		CB990E351F330F7500B8AD40 /* TextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewTableViewCell.m; sourceTree = "<group>"; };
+		CBC74F1C1F39A2B60078AD7A /* CasesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CasesDetailViewController.h; sourceTree = "<group>"; };
+		CBC74F1D1F39A2B60078AD7A /* CasesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasesDetailViewController.m; sourceTree = "<group>"; };
+		CBC74F1F1F39A2FA0078AD7A /* CasesDetailHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CasesDetailHelper.h; sourceTree = "<group>"; };
+		CBC74F201F39A2FA0078AD7A /* CasesDetailHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasesDetailHelper.m; sourceTree = "<group>"; };
+		CBC74F231F39B57B0078AD7A /* DetailCaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCaseTableViewCell.h; sourceTree = "<group>"; };
+		CBC74F241F39B57B0078AD7A /* DetailCaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCaseTableViewCell.m; sourceTree = "<group>"; };
+		CBC74F261F39BA5E0078AD7A /* Url.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Url.h; sourceTree = "<group>"; };
 		CBD9F1A31F3403F50074FB35 /* PriceDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceDetailTableViewCell.h; sourceTree = "<group>"; };
 		CBD9F1A41F3403F50074FB35 /* PriceDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceDetailTableViewCell.m; sourceTree = "<group>"; };
 		CBD9F1A61F346E510074FB35 /* PriceDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceDetailCell.h; sourceTree = "<group>"; };
@@ -473,6 +483,7 @@
 				CBE3B5401F2C671700E47D54 /* TestTableViewController.h */,
 				CBE3B5411F2C671700E47D54 /* TestTableViewController.m */,
 				CB120D941F2727AE0091477C /* pch.pch */,
+				CBC74F261F39BA5E0078AD7A /* Url.h */,
 				CB120D5F1F271DCE0091477C /* Main.storyboard */,
 				CB120D621F271DCE0091477C /* Assets.xcassets */,
 				CB120D641F271DCE0091477C /* LaunchScreen.storyboard */,
@@ -562,6 +573,7 @@
 		CB120D8F1F2727270091477C /* Cases */ = {
 			isa = PBXGroup;
 			children = (
+				CBC74F1B1F39A2600078AD7A /* DetailCases */,
 				CBD9F1BE1F35A5CC0074FB35 /* AddCases */,
 				CBD9F1B81F35A2280074FB35 /* view */,
 				CBE3B41A1F28237300E47D54 /* CasesViewController.h */,
@@ -729,6 +741,27 @@
 				CBD9F1A61F346E510074FB35 /* PriceDetailCell.h */,
 				CBD9F1A71F346E510074FB35 /* PriceDetailCell.m */,
 				CBD9F1A81F346E510074FB35 /* PriceDetailCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CBC74F1B1F39A2600078AD7A /* DetailCases */ = {
+			isa = PBXGroup;
+			children = (
+				CBC74F221F39A9D80078AD7A /* view */,
+				CBC74F1C1F39A2B60078AD7A /* CasesDetailViewController.h */,
+				CBC74F1D1F39A2B60078AD7A /* CasesDetailViewController.m */,
+				CBC74F1F1F39A2FA0078AD7A /* CasesDetailHelper.h */,
+				CBC74F201F39A2FA0078AD7A /* CasesDetailHelper.m */,
+			);
+			name = DetailCases;
+			sourceTree = "<group>";
+		};
+		CBC74F221F39A9D80078AD7A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CBC74F231F39B57B0078AD7A /* DetailCaseTableViewCell.h */,
+				CBC74F241F39B57B0078AD7A /* DetailCaseTableViewCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -1159,12 +1192,14 @@
 				CBE3B4641F28748A00E47D54 /* NSBundle+TZImagePicker.m in Sources */,
 				CBE3B5491F2C8F7500E47D54 /* OperationTableViewCell.m in Sources */,
 				CB990E1E1F31AC0100B8AD40 /* PlatformeHelper.m in Sources */,
+				CBC74F1E1F39A2B60078AD7A /* CasesDetailViewController.m in Sources */,
 				CBE3B46B1F28748A00E47D54 /* TZPhotoPickerController.m in Sources */,
 				CBE3B5291F2C265E00E47D54 /* BaseTableViewCell.m in Sources */,
 				CBE3B4681F28748A00E47D54 /* TZImageManager.m in Sources */,
 				CB990E221F31AEF500B8AD40 /* MapTableViewCell.m in Sources */,
 				CB990DFB1F318ABF00B8AD40 /* TADotView.m in Sources */,
 				CB990DB51F31756E00B8AD40 /* HomeHelper.m in Sources */,
+				CBC74F251F39B57B0078AD7A /* DetailCaseTableViewCell.m in Sources */,
 				CB990D9B1F3169A100B8AD40 /* CalendarModel.m in Sources */,
 				CBE3B4471F28744E00E47D54 /* UIViewController+CYLTabBarControllerExtention.m in Sources */,
 				CBE3B4701F28748A00E47D54 /* TZVideoPlayerController.m in Sources */,
@@ -1216,6 +1251,7 @@
 				CB990DFF1F318ABF00B8AD40 /* UIView+SDExtension.m in Sources */,
 				CB0462CD1F2F162200133A19 /* ProjectScrollView.m in Sources */,
 				CBE3B43A1F28743600E47D54 /* CYLTabBar.m in Sources */,
+				CBC74F211F39A2FA0078AD7A /* CasesDetailHelper.m in Sources */,
 				CBE3B47D1F28765500E47D54 /* CenterPopView.m in Sources */,
 				CBE3B41F1F28237E00E47D54 /* HomeViewController.m in Sources */,
 				CBE3B46C1F28748A00E47D54 /* TZPhotoPreviewCell.m in Sources */,

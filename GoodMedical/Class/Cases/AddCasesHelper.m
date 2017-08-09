@@ -76,13 +76,29 @@
 
 - (NSDictionary *)casesDict{
    
+    NSMutableDictionary * dict =[NSMutableDictionary dictionary];
     
     
-    
+    [dict setObject:_firstDateCell.dateString forKey:@"shouci"];
+    [dict setObject:_nameCell.value forKey:@"name"];
+    [dict setObject:_sexCell.pickValue forKey:@"sex"];
+    [dict setObject:_ageCell.value forKey:@"age"];
+    [dict setObject:_dateBrithCell.dateString forKey:@"birthday"];
+    [dict setObject:_phoneCell.value forKey:@"phone"];
+    [dict setObject:_emergencyNameCell.value forKey:@"emergencyName"];
+    [dict setObject:_emergencyRelationshipCell.value forKey:@"emergency"];
+    [dict setObject:_emergencyPhoneCell forKey:@"emergencyPhone"];
+    [dict setObject:_casesNumberCell.value forKey:@"case"];
+    [dict setObject:_doorNumberCell.value forKey:@"doorNumber"];
+    [dict setObject:_historyCell.value forKey:@"history"];
+    [dict setObject:_cardCell.value forKey:@"card"];
+    _casesDict = dict;
     
     
     return _casesDict;
 }
+
+
 
 
 #pragma mark  tableview代理方法

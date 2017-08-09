@@ -12,10 +12,11 @@
 #import "CalendarTableViewCell.h"
 #import "PlatformDetailViewController.h"
 #import "TotalPriceModel.h"
+#import "ZHPickerCell.h"
 @interface PlatformeHelper ()
 
 @property (nonatomic, strong) CalendarTableViewCell * calendarCell;
-
+@property (nonatomic, strong) ZHPickerCell * projectCell;
 @end
 
 @implementation PlatformeHelper
@@ -70,6 +71,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
+    if (section ==1) {
+        
+        return 10;
+    }
+    
     return 40;
 }
 
@@ -78,7 +84,7 @@
     if (section == 0) {
         
         return [self creatSectionHead:YES];
-    }else{
+    }else if (section == 2){
         
         return [self creatSectionHead:NO];
     }
@@ -89,7 +95,7 @@
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
-    return 2;
+    return 3;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
@@ -112,9 +118,12 @@
         MapTableViewCell * map = [tableView dequeueReusableCellWithIdentifier:@"map"];
         
         return map;
-    }else{
+    }else if (indexPath.section == 1){
         
+        return  self.projectCell;
+    }else{
         return self.calendarCell;
+
     }
   
     return [UITableViewCell new];
@@ -127,6 +136,24 @@
    
     
     
+}
+
+- (ZHPickerCell *)projectCell{
+    
+    
+    if (!_projectCell) {
+        _projectCell = [[ZHPickerCell alloc]initWithRows:@[@"男",@"女"] rowValues:@[@"男",@"女"]];
+        _projectCell.nameLB.text = @"选择项目";
+
+        [_projectCell setPlaceholder:@"请选择项目"];
+        [_projectCell upWidthChange:YES];
+        
+ 
+        
+    }
+    
+    
+    return _projectCell;
 }
 
 - (CalendarTableViewCell *)calendarCell{

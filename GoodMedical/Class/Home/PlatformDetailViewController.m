@@ -22,22 +22,18 @@
     self.navigationItem.title = @"平台预约";
     [self addHelper];
     
-    
-
-    
 }
 
 
 - (void)addHelper{
     
     _detailhelper = [PlatformDetailHelper blog];
-//    _detailhelper.tableView.frame = self.view.bounds;
     [self.view addSubview:_detailhelper.tableView];
     WEAKSELF(wk)
     [_detailhelper.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.bottom.left.right.equalTo(wk.view);
-        
+    
     }];
     
     

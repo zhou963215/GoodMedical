@@ -263,4 +263,40 @@
     
 }
 
+- (NSString *)dateString{
+    
+    
+    NSString * str = self.label.text;
+    
+        str = [str substringToIndex:3];
+        
+        if ([str isEqualToString:@"请选择"]) {
+            
+            self.dateString = [self defaultDate];
+        
+    }else{
+        
+        NSDate * date = self.values[0];
+        NSDateFormatter * formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+        _dateString = [formatter stringFromDate:date];
+        
+                
+    }
+    
+    
+    
+    return _dateString;
+}
+- (NSString * )defaultDate{
+    
+    
+    NSDate * date = [NSDate date];
+    NSDateFormatter * formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    
+    return [formatter stringFromDate:date];
+    
+    
+}
 @end

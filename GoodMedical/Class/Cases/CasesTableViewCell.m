@@ -8,6 +8,15 @@
 
 #import "CasesTableViewCell.h"
 
+@interface CasesTableViewCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *headImage;
+@property (weak, nonatomic) IBOutlet UILabel *nameLB;
+@property (weak, nonatomic) IBOutlet UILabel *sexLB;
+@property (weak, nonatomic) IBOutlet UILabel *ageLB;
+@property (weak, nonatomic) IBOutlet UILabel *timeLB;
+
+@end
+
 @implementation CasesTableViewCell
 
 - (void)awakeFromNib {
@@ -15,10 +24,9 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
-}
+
+
+
 
 @end

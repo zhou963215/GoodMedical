@@ -17,6 +17,7 @@
 #import "TextViewTableViewCell.h"
 #import "PriceDetailTableViewCell.h"
 #import "PriceDetailCell.h"
+#import "PayDetailViewController.h"
 @interface PlatformDetailHelper ()
 
 @property (nonatomic, strong) TotalPriceModel * total;
@@ -333,6 +334,8 @@
     NSDictionary * dict = @{@"name":_nameInputCell.value,@"phone":_phoneInputCell.value,@"opretion":_operation.values[0],@"project":_project.values[0],@"shop":_total.shopArray,@"area":_textCell.textString};
     
     NSLog(@"单休根本不够休息-------%@",dict);
+    
+    [self.tableView.navigationController pushViewController:[PayDetailViewController new] animated:YES];
     
     
     

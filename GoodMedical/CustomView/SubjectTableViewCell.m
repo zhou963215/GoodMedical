@@ -111,7 +111,6 @@
         self.upHeight(bounds.size.height);
     }
     
-    
 }
 
 - (void)setTitle:(NSString *)title withValue:(id)value{

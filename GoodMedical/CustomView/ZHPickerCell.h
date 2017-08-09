@@ -12,6 +12,7 @@
 @property(nonatomic, retain) NSArray *rows;
 @property(nonatomic, retain) NSArray *rowValues;
 @property(nonatomic, retain) UILabel * nameLB;
+@property(nonatomic, copy) NSString * pickValue;
 
 - (instancetype)initWithRows:(NSArray *)rows rowValues:(NSArray *)rowValues;
 - (instancetype)initWithRowsAndValues:(NSDictionary *)rowWithValues;

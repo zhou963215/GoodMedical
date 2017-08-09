@@ -402,10 +402,19 @@
     
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (NSString *)pickValue{
+    
+    if (self.values.count==0) {
+        
+        _pickValue = @"";
+        
+    }else{
+        
+        _pickValue = self.values[0];
+    }
+    
+    
+    return _pickValue;
+    
 }
-
 @end

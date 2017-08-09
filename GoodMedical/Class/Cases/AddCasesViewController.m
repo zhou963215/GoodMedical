@@ -63,8 +63,31 @@
 - (void)savestep:(UIButton *)sender{
     
     
+    NSMutableDictionary * caseDict = [_addCases.casesDict mutableCopy];
+    
+    NSArray * keys = caseDict.allKeys;
+    
+    for (NSString * key in keys) {
+        
+        NSString * str = caseDict[key];
+        
+        if ([str isEqualToString:@""]) {
+            
+            if ([key isEqualToString:@"name"]) {
+                
+                [ZHHud initWithMessage:@"请输入姓名"];
+                return;
+            }
+            
+            
+            
+        }
+        
+        
+    }
     
     
+    NSLog(@"%@",_addCases.casesDict);
     
     
     
