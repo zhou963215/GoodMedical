@@ -10,28 +10,36 @@
 
 @interface MessageViewController ()
 
+@property (nonatomic, strong) UISegmentedControl * segmentedControl;
+
 @end
 
 @implementation MessageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.navigationItem.titleView = self.segmentedControl;
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+- (UISegmentedControl *)segmentedControl{
+    
+    if (!_segmentedControl) {
+        
+        _segmentedControl = [[UISegmentedControl alloc]initWithItems:@[@"消息",@"动态"]];
+        _segmentedControl.tintColor = [UIColor blueColor];
+        
+    }
+    
+    
+    
+    
+    return _segmentedControl;
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

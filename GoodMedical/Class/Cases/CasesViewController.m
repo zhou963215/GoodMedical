@@ -40,11 +40,27 @@
     _casesHleper = [CasesHelper blog];
     [self.view addSubview:_casesHleper.tableView];
     WEAKSELF(wk);
-    [_casesHleper.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    
+    
+    if (self.navigationController.viewControllers.count>1) {
         
-          make.left.top.right.bottom.equalTo(wk.view);
+        [_casesHleper.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            make.left.top.right.bottom.equalTo(wk.view);
+            
+        }];
         
-    }];
+    }else{
+        
+        [_casesHleper.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            make.left.top.right.equalTo(wk.view);
+            make.bottom.equalTo(wk.view).offset(-49);
+            
+        }];
+        
+    }
+   
 }
 - (void)addNewCases{
     

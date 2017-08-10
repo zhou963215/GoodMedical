@@ -1,21 +1,18 @@
 //
-//  CasesDetailHelper.m
+//  MineHelper.m
 //  GoodMedical
 //
-//  Created by zhou on 2017/8/8.
+//  Created by zhou on 2017/8/10.
 //  Copyright © 2017年 zhou. All rights reserved.
 //
 
-#import "CasesDetailHelper.h"
-#import "CasesTableViewCell.h"
-#import "DetailCaseTableViewCell.h"
-#import "CasesDetailModel.h"
-#import "DetailCaseFrame.h"
-@implementation CasesDetailHelper
+#import "MineHelper.h"
+
+@implementation MineHelper
 
 +(instancetype)blog{
     
-    return [[CasesDetailHelper alloc]init];
+    return [[MineHelper alloc]init];
 }
 
 - (instancetype)init{
@@ -33,10 +30,9 @@
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 44;
         [self.tableView registerNib:[UINib nibWithNibName:@"CasesTableViewCell" bundle:nil] forCellReuseIdentifier:@"cases"];
-        [self.tableView registerClass:[DetailCaseTableViewCell class] forCellReuseIdentifier:@"detail"];
-        
         UIView  * view = [UIView new];
         self.tableView.tableFooterView = view;
+        
         
         
         
@@ -62,60 +58,24 @@
 
 #pragma mark  tableview代理方法
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    if (indexPath.section ==0) {
-        
-        return  UITableViewAutomaticDimension;
-    }
-    
-    DetailCaseFrame * frame  = _dataArray[indexPath.row];
-    
-    
-    return frame.rowHeight;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
-    return 2;
-}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    if (section == 0) {
-        
-        return 1;
-    }
     
     
-    return _dataArray.count;
+    
+    return 10;
     
 }
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.section == 0) {
-        
-        CasesTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cases"];
-        
-        return cell;
-    }else{
-        
-        DetailCaseTableViewCell  * cell = [tableView dequeueReusableCellWithIdentifier:@"detail"];
-        
-        DetailCaseFrame * dict = _dataArray[indexPath.row];
-        
-        [cell upDataWithModel:dict];
-        
-        
-        return cell;
-        
-    }
+//    CasesTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cases"];
+//    
+//    
     
-    
-    
-    return [UITableViewCell new];
+    return nil;
     
 }
 
@@ -123,9 +83,8 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    
-    
 }
+
 
 
 

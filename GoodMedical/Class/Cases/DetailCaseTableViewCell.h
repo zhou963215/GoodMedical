@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DetailCaseFrame.h"
 @interface CasesImageView : UIView
 
 @end
@@ -16,6 +16,8 @@
 
 @end
 
+
+
 @interface DetailCaseTableViewCell : UITableViewCell
-- (void)upDataWithModel:(NSDictionary *)dict;
+- (void)upDataWithModel:(DetailCaseFrame *)frame;
 @end

@@ -30,6 +30,9 @@
 		CB120D711F271DCE0091477C /* GoodMedicalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB120D701F271DCE0091477C /* GoodMedicalTests.m */; };
 		CB120D7C1F271DCE0091477C /* GoodMedicalUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB120D7B1F271DCE0091477C /* GoodMedicalUITests.m */; };
 		CB120DD81F2746080091477C /* ZHTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CB120DD71F2746080091477C /* ZHTabBarControllerConfig.m */; };
+		CB81B49A1F3BF2590099A064 /* DetailCaseFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CB81B4991F3BF2590099A064 /* DetailCaseFrame.m */; };
+		CB81B49D1F3BF6140099A064 /* CasesDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB81B49C1F3BF6140099A064 /* CasesDetailModel.m */; };
+		CB81B4A01F3C3EA80099A064 /* MineHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB81B49F1F3C3EA80099A064 /* MineHelper.m */; };
 		CB990D951F3169A100B8AD40 /* BSLCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D851F3169A100B8AD40 /* BSLCalendar.m */; };
 		CB990D961F3169A100B8AD40 /* BSLMonthCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D881F3169A100B8AD40 /* BSLMonthCollectionView.m */; };
 		CB990D971F3169A100B8AD40 /* CalendaDaysCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D8A1F3169A100B8AD40 /* CalendaDaysCell.m */; };
@@ -185,6 +188,12 @@
 		CB120D941F2727AE0091477C /* pch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pch.pch; sourceTree = "<group>"; };
 		CB120DD61F2746080091477C /* ZHTabBarControllerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHTabBarControllerConfig.h; path = ../../ZHTabBarControllerConfig.h; sourceTree = "<group>"; };
 		CB120DD71F2746080091477C /* ZHTabBarControllerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHTabBarControllerConfig.m; path = ../../ZHTabBarControllerConfig.m; sourceTree = "<group>"; };
+		CB81B4981F3BF2590099A064 /* DetailCaseFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCaseFrame.h; sourceTree = "<group>"; };
+		CB81B4991F3BF2590099A064 /* DetailCaseFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCaseFrame.m; sourceTree = "<group>"; };
+		CB81B49B1F3BF6140099A064 /* CasesDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CasesDetailModel.h; sourceTree = "<group>"; };
+		CB81B49C1F3BF6140099A064 /* CasesDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasesDetailModel.m; sourceTree = "<group>"; };
+		CB81B49E1F3C3EA80099A064 /* MineHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHelper.h; sourceTree = "<group>"; };
+		CB81B49F1F3C3EA80099A064 /* MineHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineHelper.m; sourceTree = "<group>"; };
 		CB990D841F3169A100B8AD40 /* BSLCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLCalendar.h; sourceTree = "<group>"; };
 		CB990D851F3169A100B8AD40 /* BSLCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLCalendar.m; sourceTree = "<group>"; };
 		CB990D871F3169A100B8AD40 /* BSLMonthCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLMonthCollectionView.h; sourceTree = "<group>"; };
@@ -617,6 +626,8 @@
 			children = (
 				CBE3B4231F28239100E47D54 /* MineViewController.h */,
 				CBE3B4241F28239100E47D54 /* MineViewController.m */,
+				CB81B49E1F3C3EA80099A064 /* MineHelper.h */,
+				CB81B49F1F3C3EA80099A064 /* MineHelper.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -767,6 +778,10 @@
 				CBFB0EFA1F3ADF810043C969 /* YYPhotoBrowseView.m */,
 				CBC74F231F39B57B0078AD7A /* DetailCaseTableViewCell.h */,
 				CBC74F241F39B57B0078AD7A /* DetailCaseTableViewCell.m */,
+				CB81B4981F3BF2590099A064 /* DetailCaseFrame.h */,
+				CB81B4991F3BF2590099A064 /* DetailCaseFrame.m */,
+				CB81B49B1F3BF6140099A064 /* CasesDetailModel.h */,
+				CB81B49C1F3BF6140099A064 /* CasesDetailModel.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -1191,6 +1206,7 @@
 				CB990E1A1F31AA9200B8AD40 /* PlatformeViewController.m in Sources */,
 				CB990E2D1F32B1BE00B8AD40 /* PlatformDetailHelper.m in Sources */,
 				CBE3B4651F28748A00E47D54 /* TZAssetCell.m in Sources */,
+				CB81B49D1F3BF6140099A064 /* CasesDetailModel.m in Sources */,
 				CBE3B4771F28751500E47D54 /* ZHNetWorking.m in Sources */,
 				CBD9F1AE1F359A680074FB35 /* PayDetailViewController.m in Sources */,
 				CBE3B46E1F28748A00E47D54 /* TZProgressView.m in Sources */,
@@ -1225,6 +1241,7 @@
 				CBE3B48D1F2B1BE500E47D54 /* ClassificationHelper.m in Sources */,
 				CBE3B46D1F28748A00E47D54 /* TZPhotoPreviewController.m in Sources */,
 				CB990D971F3169A100B8AD40 /* CalendaDaysCell.m in Sources */,
+				CB81B4A01F3C3EA80099A064 /* MineHelper.m in Sources */,
 				CB990DBB1F3177E200B8AD40 /* HomeCollectionViewCell.m in Sources */,
 				CB990E371F330F7500B8AD40 /* TextViewTableViewCell.m in Sources */,
 				CBE3B4861F2894E400E47D54 /* BasePopView.m in Sources */,
@@ -1232,6 +1249,7 @@
 				CBD9F1A91F346E510074FB35 /* PriceDetailCell.m in Sources */,
 				CB0462C91F2EFED300133A19 /* PeriodCollectionViewCell.m in Sources */,
 				CB0462F31F306B4800133A19 /* TotalPriceModel.m in Sources */,
+				CB81B49A1F3BF2590099A064 /* DetailCaseFrame.m in Sources */,
 				CBE3B4221F28238700E47D54 /* MessageViewController.m in Sources */,
 				CB120D581F271DCE0091477C /* main.m in Sources */,
 				CBE3B5381F2C3AC000E47D54 /* NSDate+util.m in Sources */,
