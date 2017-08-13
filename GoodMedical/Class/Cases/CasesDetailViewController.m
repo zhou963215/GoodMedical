@@ -9,6 +9,7 @@
 #import "CasesDetailViewController.h"
 #import "CasesDetailHelper.h"
 #import "DetailCaseFrame.h"
+#import "CasesAfterViewController.h"
 @interface CasesDetailViewController ()
 
 @property (nonatomic ,strong) CasesDetailHelper * detailHelp;
@@ -21,9 +22,24 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"病程";
+    
+    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"添加" forState:UIControlStateNormal];
+    button.titleLabel.textColor = [UIColor whiteColor];
+    button.frame = CGRectMake(0, 0, 40, 50);
+    button.titleLabel.font = [UIFont systemFontOfSize:14];
+    [button addTarget:self action:@selector(addNewCases) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
     [self addCasesHlep];
+    
 
+}
 
+- (void)addNewCases{
+    
+    [self.navigationController pushViewController:[CasesAfterViewController new] animated:YES];
+    
+    
 }
 
 

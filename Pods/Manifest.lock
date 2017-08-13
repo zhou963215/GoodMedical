@@ -14,14 +14,14 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - BaiduMapKit (3.2.1)
-  - IQKeyboardManager (4.0.9)
+  - BaiduMapKit (3.3.4)
+  - IQKeyboardManager (4.0.11)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
   - TTOpenInAppActivity (1.0)
   - WeChat_SDK (1.7.5.1)
   - YYKit (1.0.9):
@@ -42,12 +42,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  BaiduMapKit: 9c748785aa3dddfc41dcb70c14b21ce32f680930
-  IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
+  BaiduMapKit: 6f2d76a04b72e9af938afb5ca0f97d4417bbf9c0
+  IQKeyboardManager: 83eae5318483a34eb2069ef413d195b97605232e
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   TTOpenInAppActivity: c2218fe419d03ddd4ffb1f07d52d66e0d213d0d4
   WeChat_SDK: 235a2ae8967bcbe54c1e5668c187641c886b19af
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7

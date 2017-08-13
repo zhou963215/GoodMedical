@@ -27,13 +27,16 @@
 - (instancetype)initWithTitle:(NSString*)title subject:(NSString *)subject height:(CGFloat)height{
     
     self =  [super init];
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
-    [self setSubviews];
-    _inupt.text = subject;
-    _nameLB.text = title;
-    _value = @"";
-  
-    self.backgroundColor = [UIColor whiteColor];
+    
+    if (self) {
+        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        [self setSubviews];
+        _inupt.text = subject;
+        _value = @"";
+        self.backgroundColor = [UIColor whiteColor];
+    }
+   
     
     
     return self;
@@ -43,31 +46,18 @@
     
     WEAKSELF(wk);
     
-    self.nameLB = [UILabel new];
-    self.nameLB.textColor = UICOLORRGB(0x777777);
-    self.nameLB.font = [UIFont systemFontOfSize:14];
-    [self addSubview:self.nameLB];
-
     self.inupt = [UITextView new];
     _inupt.delegate = self;
-    _inupt.scrollEnabled = NO;
     _inupt.font = [UIFont systemFontOfSize:14];
     _inupt.textColor = UICOLORRGB(0x8f8f8f);
     [self addSubview:self.inupt];
     
-    [self.nameLB mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.left.equalTo(wk).offset(20);
-        make.height.mas_offset(@20);
-        make.top.equalTo(wk).offset(11);
-    }];
-
     
     [_inupt mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(wk).offset(21);
-        make.right.equalTo(wk).offset(-19);
-        make.top.equalTo(wk.nameLB.mas_bottom).offset(8);
-        make.bottom.equalTo(wk.mas_bottom).offset(-11);
+        make.left.equalTo(wk).offset(20);
+        make.right.equalTo(wk).offset(-20);
+        make.top.equalTo(wk).offset(10);
+        make.bottom.equalTo(wk.mas_bottom).offset(-10);
     }];
     
    
@@ -79,7 +69,7 @@
          self.value = textView.text;
     }
     else{
-        textView.text = @"请输入任务描述";
+        textView.text = @"请输入记录描述";
         self.value = @"";
     }
     
@@ -90,7 +80,7 @@
 
 -(void)textViewDidBeginEditing:(UITextView *)textView{
     
-    if ([textView.text isEqualToString:@"请输入任务描述"]) {
+    if ([textView.text isEqualToString:@"请输入记录描述"]) {
      
         textView.text = @"";
       

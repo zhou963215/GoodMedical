@@ -108,6 +108,7 @@
     } completion:^(BOOL finished) {
         [_collectionView reloadData];
     }];
+    
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == _selectedPhotos.count) {

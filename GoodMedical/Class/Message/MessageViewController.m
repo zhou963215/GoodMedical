@@ -19,27 +19,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.titleView = self.segmentedControl;
+    self.navigationItem.title = @"消息";
+    [self headerView];
 
 }
 
 
+- (void)headerView{
+   
+    UIView * bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 51)];
+    bgView.backgroundColor = RGB(237, 237, 237);
+    UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 50)];
+    view.backgroundColor = [UIColor whiteColor];
+    _segmentedControl = [[UISegmentedControl alloc]initWithItems:@[@"消息",@"动态"]];
+    [_segmentedControl setWidth:150];
+    _segmentedControl.tintColor = [UIColor orangeColor];
+    _segmentedControl.selectedSegmentIndex = 0;
+    _segmentedControl.center = view.center;
+    [view addSubview:_segmentedControl];
+    [bgView addSubview:view];
+    [_segmentedControl addTarget:self action:@selector(segClick:) forControlEvents:UIControlEventValueChanged];
 
-- (UISegmentedControl *)segmentedControl{
-    
-    if (!_segmentedControl) {
-        
-        _segmentedControl = [[UISegmentedControl alloc]initWithItems:@[@"消息",@"动态"]];
-        _segmentedControl.tintColor = [UIColor blueColor];
-        
-    }
-    
-    
-    
-    
-    return _segmentedControl;
+    [self.view addSubview:bgView];
+   
 }
 
-
+- (void)segClick:(UISegmentedControl *)seg{
+    
+    
+    
+}
 
 @end

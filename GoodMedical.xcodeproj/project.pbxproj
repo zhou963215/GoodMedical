@@ -33,6 +33,10 @@
 		CB81B49A1F3BF2590099A064 /* DetailCaseFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CB81B4991F3BF2590099A064 /* DetailCaseFrame.m */; };
 		CB81B49D1F3BF6140099A064 /* CasesDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB81B49C1F3BF6140099A064 /* CasesDetailModel.m */; };
 		CB81B4A01F3C3EA80099A064 /* MineHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB81B49F1F3C3EA80099A064 /* MineHelper.m */; };
+		CB81B4A31F3D44E90099A064 /* CasesAfterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB81B4A21F3D44E90099A064 /* CasesAfterViewController.m */; };
+		CB81B4A71F3D48A90099A064 /* CasesAfterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB81B4A61F3D48A90099A064 /* CasesAfterHelper.m */; };
+		CB81B4AB1F3D4C4E0099A064 /* PhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB81B4AA1F3D4C4E0099A064 /* PhotoTableViewCell.m */; };
+		CB81B4AE1F3DAC3E0099A064 /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB81B4AD1F3DAC3E0099A064 /* PhotoModel.m */; };
 		CB990D951F3169A100B8AD40 /* BSLCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D851F3169A100B8AD40 /* BSLCalendar.m */; };
 		CB990D961F3169A100B8AD40 /* BSLMonthCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D881F3169A100B8AD40 /* BSLMonthCollectionView.m */; };
 		CB990D971F3169A100B8AD40 /* CalendaDaysCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D8A1F3169A100B8AD40 /* CalendaDaysCell.m */; };
@@ -194,6 +198,14 @@
 		CB81B49C1F3BF6140099A064 /* CasesDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasesDetailModel.m; sourceTree = "<group>"; };
 		CB81B49E1F3C3EA80099A064 /* MineHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHelper.h; sourceTree = "<group>"; };
 		CB81B49F1F3C3EA80099A064 /* MineHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineHelper.m; sourceTree = "<group>"; };
+		CB81B4A11F3D44E90099A064 /* CasesAfterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CasesAfterViewController.h; sourceTree = "<group>"; };
+		CB81B4A21F3D44E90099A064 /* CasesAfterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasesAfterViewController.m; sourceTree = "<group>"; };
+		CB81B4A51F3D48A90099A064 /* CasesAfterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CasesAfterHelper.h; sourceTree = "<group>"; };
+		CB81B4A61F3D48A90099A064 /* CasesAfterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasesAfterHelper.m; sourceTree = "<group>"; };
+		CB81B4A91F3D4C4E0099A064 /* PhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTableViewCell.h; sourceTree = "<group>"; };
+		CB81B4AA1F3D4C4E0099A064 /* PhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTableViewCell.m; sourceTree = "<group>"; };
+		CB81B4AC1F3DAC3E0099A064 /* PhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoModel.h; sourceTree = "<group>"; };
+		CB81B4AD1F3DAC3E0099A064 /* PhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoModel.m; sourceTree = "<group>"; };
 		CB990D841F3169A100B8AD40 /* BSLCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLCalendar.h; sourceTree = "<group>"; };
 		CB990D851F3169A100B8AD40 /* BSLCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLCalendar.m; sourceTree = "<group>"; };
 		CB990D871F3169A100B8AD40 /* BSLMonthCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLMonthCollectionView.h; sourceTree = "<group>"; };
@@ -585,6 +597,7 @@
 		CB120D8F1F2727270091477C /* Cases */ = {
 			isa = PBXGroup;
 			children = (
+				CB81B4A41F3D44EE0099A064 /* CasesAfter */,
 				CBC74F1B1F39A2600078AD7A /* DetailCases */,
 				CBD9F1BE1F35A5CC0074FB35 /* AddCases */,
 				CBD9F1B81F35A2280074FB35 /* view */,
@@ -630,6 +643,29 @@
 				CB81B49F1F3C3EA80099A064 /* MineHelper.m */,
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		CB81B4A41F3D44EE0099A064 /* CasesAfter */ = {
+			isa = PBXGroup;
+			children = (
+				CB81B4A81F3D49300099A064 /* view */,
+				CB81B4A11F3D44E90099A064 /* CasesAfterViewController.h */,
+				CB81B4A21F3D44E90099A064 /* CasesAfterViewController.m */,
+				CB81B4A51F3D48A90099A064 /* CasesAfterHelper.h */,
+				CB81B4A61F3D48A90099A064 /* CasesAfterHelper.m */,
+			);
+			name = CasesAfter;
+			sourceTree = "<group>";
+		};
+		CB81B4A81F3D49300099A064 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CB81B4A91F3D4C4E0099A064 /* PhotoTableViewCell.h */,
+				CB81B4AA1F3D4C4E0099A064 /* PhotoTableViewCell.m */,
+				CB81B4AC1F3DAC3E0099A064 /* PhotoModel.h */,
+				CB81B4AD1F3DAC3E0099A064 /* PhotoModel.m */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 		CB990D831F3169A100B8AD40 /* BSLCalendar */ = {
@@ -1191,6 +1227,8 @@
 				CBE3B4661F28748A00E47D54 /* TZAssetModel.m in Sources */,
 				CB990E321F32F6A500B8AD40 /* DetailPlatformCell.m in Sources */,
 				CB990DFE1F318ABF00B8AD40 /* SDCycleScrollView.m in Sources */,
+				CB81B4AE1F3DAC3E0099A064 /* PhotoModel.m in Sources */,
+				CB81B4A31F3D44E90099A064 /* CasesAfterViewController.m in Sources */,
 				CBFB0EFB1F3ADF810043C969 /* YYPhotoBrowseView.m in Sources */,
 				CB0462C51F2EC27300133A19 /* PeriodTimeView.m in Sources */,
 				CB990DFA1F318ABF00B8AD40 /* TAAnimatedDotView.m in Sources */,
@@ -1249,6 +1287,7 @@
 				CBD9F1A91F346E510074FB35 /* PriceDetailCell.m in Sources */,
 				CB0462C91F2EFED300133A19 /* PeriodCollectionViewCell.m in Sources */,
 				CB0462F31F306B4800133A19 /* TotalPriceModel.m in Sources */,
+				CB81B4AB1F3D4C4E0099A064 /* PhotoTableViewCell.m in Sources */,
 				CB81B49A1F3BF2590099A064 /* DetailCaseFrame.m in Sources */,
 				CBE3B4221F28238700E47D54 /* MessageViewController.m in Sources */,
 				CB120D581F271DCE0091477C /* main.m in Sources */,
@@ -1258,6 +1297,7 @@
 				CB990D981F3169A100B8AD40 /* WeeksView.m in Sources */,
 				CB990DF91F318ABF00B8AD40 /* TAAbstractDotView.m in Sources */,
 				CBE3B44A1F28746E00E47D54 /* UIView+Layout.m in Sources */,
+				CB81B4A71F3D48A90099A064 /* CasesAfterHelper.m in Sources */,
 				CBD9F1B31F35A0B20074FB35 /* PayOrderTableViewCell.m in Sources */,
 				CBE3B4391F28743600E47D54 /* CYLPlusButton.m in Sources */,
 				CBE3B47A1F28763500E47D54 /* CYLPlusButtonSubclass.m in Sources */,
