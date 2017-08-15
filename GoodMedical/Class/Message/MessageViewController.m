@@ -7,11 +7,11 @@
 //
 
 #import "MessageViewController.h"
-
+#import "MessageHelp.h"
 @interface MessageViewController ()
 
 @property (nonatomic, strong) UISegmentedControl * segmentedControl;
-
+@property (nonatomic, strong) MessageHelp * messageHelp;
 @end
 
 @implementation MessageViewController
@@ -21,7 +21,7 @@
 
     self.navigationItem.title = @"消息";
     [self headerView];
-
+    [self addMessageHelp];
 }
 
 
@@ -46,8 +46,30 @@
 
 - (void)segClick:(UISegmentedControl *)seg{
     
+   
+    
     
     
 }
+
+- (void)addMessageHelp{
+    
+    _messageHelp = [MessageHelp blog];
+    [self.view addSubview:_messageHelp.tableView];
+    
+    WEAKSELF(wk);
+    
+    [_messageHelp.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.right.equalTo(wk.view);
+        make.top.equalTo(wk.view).offset(51);
+        make.bottom.equalTo(wk.view).offset(-49);
+    }];
+    
+    
+    
+    
+}
+
 
 @end

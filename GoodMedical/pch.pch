@@ -14,6 +14,7 @@
 #import "UIView+Controller.h"
 #import <YYKit/YYKit.h>
 #import "Url.h"
+#import "PublicTools.h"
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 #define WINDOW  [UIApplication sharedApplication].keyWindow

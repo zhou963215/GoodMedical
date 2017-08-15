@@ -63,6 +63,16 @@
 		CB990E321F32F6A500B8AD40 /* DetailPlatformCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990E301F32F6A500B8AD40 /* DetailPlatformCell.m */; };
 		CB990E331F32F6A500B8AD40 /* DetailPlatformCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB990E311F32F6A500B8AD40 /* DetailPlatformCell.xib */; };
 		CB990E371F330F7500B8AD40 /* TextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990E351F330F7500B8AD40 /* TextViewTableViewCell.m */; };
+		CBA2FF231F4184AB0019883B /* PublicTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA2FF221F4184AB0019883B /* PublicTools.m */; };
+		CBA2FF251F418AD70019883B /* a1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CBA2FF241F418AD70019883B /* a1.jpg */; };
+		CBA2FF281F419E830019883B /* MessageHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA2FF271F419E830019883B /* MessageHelp.m */; };
+		CBA2FF321F41AAA30019883B /* FunctionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA2FF301F41AAA30019883B /* FunctionTableViewCell.m */; };
+		CBA2FF331F41AAA30019883B /* FunctionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA2FF311F41AAA30019883B /* FunctionTableViewCell.xib */; };
+		CBAE3F161F4282F700C18BF4 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAE3F141F4282F700C18BF4 /* MessageTableViewCell.m */; };
+		CBAE3F171F4282F700C18BF4 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAE3F151F4282F700C18BF4 /* MessageTableViewCell.xib */; };
+		CBAE3F1C1F42CC4500C18BF4 /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAE3F1A1F42CC4500C18BF4 /* MineTableViewCell.m */; };
+		CBAE3F1D1F42CC4500C18BF4 /* MineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAE3F1B1F42CC4500C18BF4 /* MineTableViewCell.xib */; };
+		CBAE3F251F42EA5D00C18BF4 /* CertificationSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAE3F231F42EA5D00C18BF4 /* CertificationSelectVC.m */; };
 		CBC74F1E1F39A2B60078AD7A /* CasesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC74F1D1F39A2B60078AD7A /* CasesDetailViewController.m */; };
 		CBC74F211F39A2FA0078AD7A /* CasesDetailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC74F201F39A2FA0078AD7A /* CasesDetailHelper.m */; };
 		CBC74F251F39B57B0078AD7A /* DetailCaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC74F241F39B57B0078AD7A /* DetailCaseTableViewCell.m */; };
@@ -256,6 +266,22 @@
 		CB990E311F32F6A500B8AD40 /* DetailPlatformCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailPlatformCell.xib; sourceTree = "<group>"; };
 		CB990E341F330F7500B8AD40 /* TextViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewTableViewCell.h; sourceTree = "<group>"; };
 		CB990E351F330F7500B8AD40 /* TextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewTableViewCell.m; sourceTree = "<group>"; };
+		CBA2FF211F4184AB0019883B /* PublicTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicTools.h; sourceTree = "<group>"; };
+		CBA2FF221F4184AB0019883B /* PublicTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicTools.m; sourceTree = "<group>"; };
+		CBA2FF241F418AD70019883B /* a1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a1.jpg; sourceTree = "<group>"; };
+		CBA2FF261F419E830019883B /* MessageHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageHelp.h; sourceTree = "<group>"; };
+		CBA2FF271F419E830019883B /* MessageHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageHelp.m; sourceTree = "<group>"; };
+		CBA2FF2F1F41AAA30019883B /* FunctionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionTableViewCell.h; sourceTree = "<group>"; };
+		CBA2FF301F41AAA30019883B /* FunctionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionTableViewCell.m; sourceTree = "<group>"; };
+		CBA2FF311F41AAA30019883B /* FunctionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunctionTableViewCell.xib; sourceTree = "<group>"; };
+		CBAE3F131F4282F600C18BF4 /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		CBAE3F141F4282F700C18BF4 /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		CBAE3F151F4282F700C18BF4 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		CBAE3F191F42CC4500C18BF4 /* MineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell.h; sourceTree = "<group>"; };
+		CBAE3F1A1F42CC4500C18BF4 /* MineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell.m; sourceTree = "<group>"; };
+		CBAE3F1B1F42CC4500C18BF4 /* MineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineTableViewCell.xib; sourceTree = "<group>"; };
+		CBAE3F221F42EA5D00C18BF4 /* CertificationSelectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificationSelectVC.h; sourceTree = "<group>"; };
+		CBAE3F231F42EA5D00C18BF4 /* CertificationSelectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificationSelectVC.m; sourceTree = "<group>"; };
 		CBC74F1C1F39A2B60078AD7A /* CasesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CasesDetailViewController.h; sourceTree = "<group>"; };
 		CBC74F1D1F39A2B60078AD7A /* CasesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CasesDetailViewController.m; sourceTree = "<group>"; };
 		CBC74F1F1F39A2FA0078AD7A /* CasesDetailHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CasesDetailHelper.h; sourceTree = "<group>"; };
@@ -570,6 +596,8 @@
 		CB120D8C1F271F180091477C /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				CBA2FF211F4184AB0019883B /* PublicTools.h */,
+				CBA2FF221F4184AB0019883B /* PublicTools.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -628,8 +656,11 @@
 		CB120D911F2727270091477C /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				CBA2FF291F41A28E0019883B /* view */,
 				CBE3B4201F28238700E47D54 /* MessageViewController.h */,
 				CBE3B4211F28238700E47D54 /* MessageViewController.m */,
+				CBA2FF261F419E830019883B /* MessageHelp.h */,
+				CBA2FF271F419E830019883B /* MessageHelp.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -637,10 +668,13 @@
 		CB120D921F2727270091477C /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				CBAE3F1E1F42EA1500C18BF4 /* Certification */,
+				CBAE3F181F42934000C18BF4 /* view */,
 				CBE3B4231F28239100E47D54 /* MineViewController.h */,
 				CBE3B4241F28239100E47D54 /* MineViewController.m */,
 				CB81B49E1F3C3EA80099A064 /* MineHelper.h */,
 				CB81B49F1F3C3EA80099A064 /* MineHelper.m */,
+				CBA2FF241F418AD70019883B /* a1.jpg */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -793,6 +827,38 @@
 				CBD9F1A81F346E510074FB35 /* PriceDetailCell.xib */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		CBA2FF291F41A28E0019883B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CBA2FF2F1F41AAA30019883B /* FunctionTableViewCell.h */,
+				CBA2FF301F41AAA30019883B /* FunctionTableViewCell.m */,
+				CBA2FF311F41AAA30019883B /* FunctionTableViewCell.xib */,
+				CBAE3F131F4282F600C18BF4 /* MessageTableViewCell.h */,
+				CBAE3F141F4282F700C18BF4 /* MessageTableViewCell.m */,
+				CBAE3F151F4282F700C18BF4 /* MessageTableViewCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CBAE3F181F42934000C18BF4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CBAE3F191F42CC4500C18BF4 /* MineTableViewCell.h */,
+				CBAE3F1A1F42CC4500C18BF4 /* MineTableViewCell.m */,
+				CBAE3F1B1F42CC4500C18BF4 /* MineTableViewCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CBAE3F1E1F42EA1500C18BF4 /* Certification */ = {
+			isa = PBXGroup;
+			children = (
+				CBAE3F221F42EA5D00C18BF4 /* CertificationSelectVC.h */,
+				CBAE3F231F42EA5D00C18BF4 /* CertificationSelectVC.m */,
+			);
+			name = Certification;
 			sourceTree = "<group>";
 		};
 		CBC74F1B1F39A2600078AD7A /* DetailCases */ = {
@@ -1133,11 +1199,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA2FF251F418AD70019883B /* a1.jpg in Resources */,
 				CBE3B4931F2B24C400E47D54 /* LeftTableViewCell.xib in Resources */,
+				CBAE3F1D1F42CC4500C18BF4 /* MineTableViewCell.xib in Resources */,
 				CB990E331F32F6A500B8AD40 /* DetailPlatformCell.xib in Resources */,
+				CBA2FF331F41AAA30019883B /* FunctionTableViewCell.xib in Resources */,
 				CBD9F1AA1F346E510074FB35 /* PriceDetailCell.xib in Resources */,
 				CB120D661F271DCE0091477C /* LaunchScreen.storyboard in Resources */,
 				CBD9F1B41F35A0B20074FB35 /* PayOrderTableViewCell.xib in Resources */,
+				CBAE3F171F4282F700C18BF4 /* MessageTableViewCell.xib in Resources */,
 				CBD9F1BD1F35A23A0074FB35 /* CasesTableViewCell.xib in Resources */,
 				CBE3B4691F28748A00E47D54 /* TZImagePickerController.bundle in Resources */,
 				CB120D631F271DCE0091477C /* Assets.xcassets in Resources */,
@@ -1230,6 +1300,7 @@
 				CB81B4AE1F3DAC3E0099A064 /* PhotoModel.m in Sources */,
 				CB81B4A31F3D44E90099A064 /* CasesAfterViewController.m in Sources */,
 				CBFB0EFB1F3ADF810043C969 /* YYPhotoBrowseView.m in Sources */,
+				CBAE3F1C1F42CC4500C18BF4 /* MineTableViewCell.m in Sources */,
 				CB0462C51F2EC27300133A19 /* PeriodTimeView.m in Sources */,
 				CB990DFA1F318ABF00B8AD40 /* TAAnimatedDotView.m in Sources */,
 				CBE3B4441F28744E00E47D54 /* UIControl+CYLTabBarControllerExtention.m in Sources */,
@@ -1237,6 +1308,7 @@
 				CB990DFC1F318ABF00B8AD40 /* TAPageControl.m in Sources */,
 				CBE3B5351F2C273000E47D54 /* NSObject+Astray.m in Sources */,
 				CBE3B4281F2829F700E47D54 /* BaseCMViewController.m in Sources */,
+				CBA2FF231F4184AB0019883B /* PublicTools.m in Sources */,
 				CB120DD81F2746080091477C /* ZHTabBarControllerConfig.m in Sources */,
 				CBE3B46A1F28748A00E47D54 /* TZImagePickerController.m in Sources */,
 				CBE3B52C1F2C265E00E47D54 /* ZHDateCell.m in Sources */,
@@ -1246,6 +1318,7 @@
 				CBE3B4651F28748A00E47D54 /* TZAssetCell.m in Sources */,
 				CB81B49D1F3BF6140099A064 /* CasesDetailModel.m in Sources */,
 				CBE3B4771F28751500E47D54 /* ZHNetWorking.m in Sources */,
+				CBA2FF281F419E830019883B /* MessageHelp.m in Sources */,
 				CBD9F1AE1F359A680074FB35 /* PayDetailViewController.m in Sources */,
 				CBE3B46E1F28748A00E47D54 /* TZProgressView.m in Sources */,
 				CB0462DA1F2F215F00133A19 /* ProjectPopCell.m in Sources */,
@@ -1280,6 +1353,7 @@
 				CBE3B46D1F28748A00E47D54 /* TZPhotoPreviewController.m in Sources */,
 				CB990D971F3169A100B8AD40 /* CalendaDaysCell.m in Sources */,
 				CB81B4A01F3C3EA80099A064 /* MineHelper.m in Sources */,
+				CBAE3F161F4282F700C18BF4 /* MessageTableViewCell.m in Sources */,
 				CB990DBB1F3177E200B8AD40 /* HomeCollectionViewCell.m in Sources */,
 				CB990E371F330F7500B8AD40 /* TextViewTableViewCell.m in Sources */,
 				CBE3B4861F2894E400E47D54 /* BasePopView.m in Sources */,
@@ -1296,8 +1370,10 @@
 				CB990E2A1F31D80100B8AD40 /* PlatformDetailViewController.m in Sources */,
 				CB990D981F3169A100B8AD40 /* WeeksView.m in Sources */,
 				CB990DF91F318ABF00B8AD40 /* TAAbstractDotView.m in Sources */,
+				CBAE3F251F42EA5D00C18BF4 /* CertificationSelectVC.m in Sources */,
 				CBE3B44A1F28746E00E47D54 /* UIView+Layout.m in Sources */,
 				CB81B4A71F3D48A90099A064 /* CasesAfterHelper.m in Sources */,
+				CBA2FF321F41AAA30019883B /* FunctionTableViewCell.m in Sources */,
 				CBD9F1B31F35A0B20074FB35 /* PayOrderTableViewCell.m in Sources */,
 				CBE3B4391F28743600E47D54 /* CYLPlusButton.m in Sources */,
 				CBE3B47A1F28763500E47D54 /* CYLPlusButtonSubclass.m in Sources */,

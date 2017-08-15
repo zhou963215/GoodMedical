@@ -90,14 +90,14 @@
     
 }
 
-- (void) setSelectedPhotos:(NSMutableArray *)selectedPhotos{
+- (void)setSelectedPhotos:(NSMutableArray *)selectedPhotos{
     
     _selectedPhotos = selectedPhotos;
-    _editPhoto = YES;
     [self.collectionView reloadData];
     
     
 }
+
 
 #pragma mark UICollectionViewDataSource
 
@@ -149,17 +149,12 @@
 
         NSInteger differences = _selectedPhotos.count- _selectedAssets.count;
        
-        
-        
-        
             [_selectedAssets removeObjectAtIndex:sender.tag - differences ];
             [_selectedPhotos removeObjectAtIndex:sender.tag];
             
     }
     
-    
-    
-    
+        
   
     
     if (self.rowHeight) {
@@ -315,10 +310,9 @@
 - (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray *)photos sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto {
     
     
+    NSArray * array = [NSArray arrayWithArray:_selectedPhotos];
     
-  
-        
-        for (PhotoModel * model in _selectedPhotos) {
+        for (PhotoModel * model in array) {
             
             if (!model.isHistory) {
                 
@@ -339,7 +333,6 @@
     
     
     
-//    _selectedPhotos = [NSMutableArray arrayWithArray:photos];
     _selectedAssets = [NSMutableArray arrayWithArray:assets];
     _isSelectOriginalPhoto = isSelectOriginalPhoto;
     [_collectionView reloadData];
@@ -363,14 +356,32 @@
     
     CGFloat h = number * 87.5 +87.5 ;
     
-    
     return h;
     
 }
 
 
-
-
+- (NSMutableArray *)submitPhotos{
+    
+  
+    NSMutableArray * array = [NSMutableArray array];
+    
+    for (PhotoModel * model in _selectedPhotos) {
+        
+        if (!model.isHistory) {
+            
+            [array addObject:model.image];
+            
+        }
+        
+    }
+    
+    
+    _submitPhotos = array;
+    
+    
+    return _submitPhotos;
+}
 
 
 @end

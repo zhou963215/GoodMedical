@@ -7,6 +7,14 @@
 //
 
 #import "MineHelper.h"
+#import "MineTableViewCell.h"
+#import "CertificationSelectVC.h"
+@interface MineHelper ()
+@property (strong, nonatomic) UIImageView *imageView;
+
+@property (nonatomic, strong) NSArray * rows;
+
+@end
 
 @implementation MineHelper
 
@@ -24,22 +32,32 @@
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.backgroundColor = [UIColor whiteColor];
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        //        self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.tableView.separatorColor = UICOLORRGB(0xf5f5f5);
-        self.tableView.rowHeight = UITableViewAutomaticDimension;
-        self.tableView.estimatedRowHeight = 44;
-        [self.tableView registerNib:[UINib nibWithNibName:@"CasesTableViewCell" bundle:nil] forCellReuseIdentifier:@"cases"];
-        UIView  * view = [UIView new];
-        self.tableView.tableFooterView = view;
+        self.tableView.rowHeight = 44;
+        [self.tableView registerNib:[UINib nibWithNibName:@"MineTableViewCell" bundle:nil] forCellReuseIdentifier:@"mine"];
+        self.tableView.tableFooterView = [self creatBottomView];
         
+        _tableView.contentInset = UIEdgeInsetsMake(200, 0, 0, 0);
+        [self.tableView addSubview:self.imageView];
         
-        
-        
+       
+        [_tableView scrollToTop];
+        [self refreshRows];
         
     }
     
     return self;
+    
+    
+}
+
+
+- (void)refreshRows{
+    
+    
+    
+     self.rows = @[@[@{@"name":@"认证入住",@"detail":@"还未认证"}],@[@{@"name":@"预约订单",@"detail":@"3"},@{@"name":@"绑定手机号",@"detail":@"13838838438"}],@[@{@"name":@"设置",@"detail":@""},@{@"name":@"关于我们",@"detail":@""},@{@"name":@"客服电话",@"detail":@"400-001-2018"}]];
     
     
 }
@@ -58,29 +76,166 @@
 
 #pragma mark  tableview代理方法
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    if (section == _rows.count-1) {
+        
+        return 0.1;
+    }
+    return 15;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+   return  self.rows.count;
+}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
+    NSArray * arr = _rows[section];
     
     
-    
-    return 10;
+    return arr.count;
     
 }
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-//    CasesTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cases"];
-//    
-//    
     
-    return nil;
+    NSDictionary * dict = _rows[indexPath.section][indexPath.row];
+    MineTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"mine"];
+    [cell upDataWithDict:dict];
+    
+    
+    return cell;
     
 }
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    [self.tableView.navigationController pushViewController:[CertificationSelectVC new] animated:YES];
+    
+}
+
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    // 向下的话 为负数
+    CGFloat off_y = scrollView.contentOffset.y;
+//    CGFloat kHeight = [UIScreen mainScreen].bounds.size.height;
+    // 下拉超过照片的高度的时候
+    if (off_y < - 200)
+    {
+        CGRect frame = self.imageView.frame;
+        // 这里的思路就是改变 顶部的照片的 fram
+        self.imageView.frame = CGRectMake(0, off_y, frame.size.width, -off_y);
+        //        self.effectView.frame = self.imageView.frame;
+        // 对应调整毛玻璃的效果
+        //        self.effectView.alpha = 1 + (off_y + ImageHeigh) / kHeight ;
+    }
+}
+
+-(UIImageView *)imageView
+{
+    if (_imageView == nil) {
+        _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -200, WIDTH, 200)];
+        _imageView.image = [UIImage imageNamed:@"a1.jpg"];
+        _imageView.contentMode = UIViewContentModeScaleAspectFill;
+        _imageView.clipsToBounds = YES;//删除多余图片。（不加这个得话。第一行被遮盖)
+        
+        [self creatMineView];
+        
+        
+    }
+    
+    return _imageView;
+}
+
+
+- (void)creatMineView{
+    
+    
+    UIView * view = [UIView new];
+    view.backgroundColor =  UICOLORRGB(0xf5f5f5);
+    [_imageView addSubview:view];
+    
+    UIView * bottom = [UIView new];
+    bottom.backgroundColor = [UIColor whiteColor];
+    [view addSubview:bottom];
+
+    UIImageView * headImage = [UIImageView new];
+    headImage.layer.masksToBounds = YES;
+    headImage.layer.cornerRadius = 25;
+    headImage.backgroundColor = [UIColor redColor];
+    [bottom addSubview:headImage];
+    
+    UILabel * nameLabel = [UILabel new];
+    nameLabel.font = [UIFont systemFontOfSize:14];
+    nameLabel.text = @"啊啊啊啊啊";
+    [bottom addSubview:nameLabel];
+    
+    
+    WEAKSELF(wk);
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.right.bottom.equalTo(wk.imageView);
+        make.height.mas_equalTo(@64);
+    }];
+    
+    
+    [headImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.equalTo(bottom).offset(10);
+        make.size.mas_equalTo(CGSizeMake(50, 50));
+        make.centerY.equalTo(bottom.mas_top);
+    }];
+    
+    [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.equalTo(headImage.mas_right).offset(10);
+        make.centerY.equalTo(bottom);
+    }];
+    
+    [bottom mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.right.top.equalTo(view);
+        make.height.mas_equalTo(44);
+    }];
+    
+    
+    
+}
+
+- (UIView * )creatBottomView{
+    
+    UIView * backgroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 60)];
+    backgroundView.backgroundColor = GAYCOLOR;
+    UIButton * button = [UIButton buttonWithType: UIButtonTypeCustom];
+    [button setTintColor:[UIColor whiteColor]];
+    [button setBackgroundColor:[UIColor cyanColor]];
+    button.layer.masksToBounds = YES;
+    button.layer.cornerRadius = 5 ;
+    [button setTitle:@"退出登录" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(nextstep:) forControlEvents:UIControlEventTouchUpInside];
+    [backgroundView addSubview:button];
+    
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.center.equalTo(backgroundView);
+        make.size.mas_equalTo(CGSizeMake(WIDTH*0.7, 40));
+    }];
+    
+    
+    
+    return backgroundView;
+}
+
+- (void)nextstep:(UIButton *)sender{
+    
+    
     
     
 }

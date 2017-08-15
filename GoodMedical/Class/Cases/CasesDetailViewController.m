@@ -74,7 +74,7 @@
         
         int j = i%2;
         
-        NSLog(@"%d",j);
+//        NSLog(@"%d",j);
         
         DetailCaseFrame * frame = [DetailCaseFrame new];
         

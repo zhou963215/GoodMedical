@@ -170,7 +170,8 @@
         _timePickCell = [[ZHDateCell alloc]init];
         _timePickCell.nameLB.text = @"日期";
         _timePickCell.disabled = NO;
-        [_timePickCell setPlaceholder:@"请选择日期"];
+//        [_timePickCell setPlaceholder:@"请选择日期"];
+        [_timePickCell setTitle:[PublicTools defaultDate] withValue:nil];
         _timePickCell.showDate = YES;
         _timePickCell.dateFormat = @"yyyy-MM-dd";
         [_timePickCell upWidthChange:YES];
@@ -193,7 +194,8 @@
         model.url = @"http://picture.youth.cn/dmzb/201305/W020130514542662922703.jpg";
         NSArray * arr = @[model];
         
-        NSMutableArray * array = [NSMutableArray arrayWithArray:arr];
+        NSMutableArray * array = [NSMutableArray arrayWithObject:model];
+        
         _photoCell.selectedPhotos = array;
         
         
@@ -222,6 +224,16 @@
     }
     return _subjectCell;
 }
+
+- (NSDictionary *)casesData{
+    
+    
+    _casesData = @{@"type": _typePickCell.pickValue,@"date" : _timePickCell.dateString,@"photo":_photoCell.submitPhotos,@"text":_subjectCell.value};
+    
+    
+    return _casesData;
+}
+
 - (UIView *)creatSectionHead:(BOOL)isHead{
     
     UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 40)];

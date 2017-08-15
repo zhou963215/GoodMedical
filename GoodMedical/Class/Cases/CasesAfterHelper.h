@@ -11,10 +11,9 @@
 @interface CasesAfterHelper :  NSObject<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *tableView;
-@property (nonatomic,strong) NSArray * dataArray;
-
+@property (nonatomic, strong) NSArray * dataArray;
+@property (nonatomic, strong) NSDictionary * casesData;
 +(instancetype)blog;
-
 
 
 @end

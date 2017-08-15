@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong)  NSMutableArray *selectedPhotos;//选中的图片
 
+@property (nonatomic, strong) NSMutableArray * submitPhotos;
+
 @property (nonatomic, copy) void (^rowHeight)(CGFloat);
 
 @end
