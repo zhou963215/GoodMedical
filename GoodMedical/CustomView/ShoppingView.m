@@ -28,6 +28,8 @@
     NSArray * arr = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7"];
 
     
+    
+    
     _leftTab = [LeftHelper blog];
     
     _leftTab.dataArray = arr;
@@ -71,24 +73,15 @@
     
     [super submitData];
     
+    TotalPriceModel * total = [TotalPriceModel dataModel];
     
-    NSMutableArray * array = [NSMutableArray array];
+    total.shopArray = [total.shopChangeArray mutableCopy];
+    [total.shopChangeArray removeAllObjects];
     
     
-    for (ShoppingModel * shop  in _shop.dataArray) {
+    if (self.selectData) {
         
-        if (shop.buyNumber > 0) {
-            
-            [array addObject:shop];
-            
-        }
-        
-    }
-    
-    
-    if (self.selectData   ) {
-        
-        self.selectData(array);
+        self.selectData(@[]);
         
     }
     [self clickBgViewToHide];
@@ -96,12 +89,6 @@
     
 }
 
-- (void)setSelectArray:(NSMutableArray *)selectArray{
-    
-    _selectArray = selectArray;
-    _shop.selectArray = selectArray;
-    
-}
 
 
 - (NSMutableArray *)creatTsetData{

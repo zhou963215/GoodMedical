@@ -1,18 +1,19 @@
 //
-//  PhotoTableViewCell.m
+//  DoctorPhotoTableViewCell.m
 //  GoodMedical
 //
-//  Created by zhou on 2017/8/11.
+//  Created by zhou on 2017/8/17.
 //  Copyright © 2017年 zhou. All rights reserved.
 //
 
-#import "PhotoTableViewCell.h"
+#import "DoctorPhotoTableViewCell.h"
 #import "TZImagePickerController.h"
 #import "TZImageManager.h"
 #import "UIView+Layout.h"
 #import "TZTestCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-@interface PhotoTableViewCell ()<TZImagePickerControllerDelegate,UIImagePickerControllerDelegate,UICollectionViewDataSource,UICollectionViewDelegate>{
+
+@interface DoctorPhotoTableViewCell ()<TZImagePickerControllerDelegate,UIImagePickerControllerDelegate,UICollectionViewDataSource,UICollectionViewDelegate>{
     
     BOOL _isSelectOriginalPhoto;//是否选择原图
     
@@ -20,38 +21,36 @@
     CGFloat _itemWH;//缩略图宽 collectionView item 宽
     CGFloat _margin;//collectionView item  间距
     int numberInLine;//每行item个数
-    
+       
     
 }
 @property (nonatomic, assign) int columnNumberTF;//选择图片页面每栏照片数
 @property (nonatomic, assign) int maxCountTF;// 照片最大可选张数，设置为1即为单选模式
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-
 @end
 
-@implementation PhotoTableViewCell
+@implementation DoctorPhotoTableViewCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+- (instancetype)initWithTitle:(NSString *)title{
     
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    
+    self = [super init];
+
     if (self) {
+      
         _selectedPhotos = [NSMutableArray array];
         _selectedAssets = [NSMutableArray array];
-        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.columnNumberTF = 4;
         self.maxCountTF = 1000;
-        [self configCollectionView];
+        [self configCollectionViewWithTitle:title];
 
-        
     }
-    
-    
     return self;
 }
 
-- (void)configCollectionView {
+
+- (void)configCollectionViewWithTitle:(NSString *)title {
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     _margin = 10;
@@ -59,40 +58,61 @@
     _itemWH = (self.tz_width - (numberInLine-1) * _margin - 20) / numberInLine;
     layout.itemSize = CGSizeMake(_itemWH, _itemWH);
     layout.minimumInteritemSpacing = _margin;
-    layout.minimumLineSpacing = _margin;
+    layout.minimumLineSpacing = 0;
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+
     
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-    _collectionView.alwaysBounceVertical = YES;
     _collectionView.backgroundColor = [UIColor whiteColor];
-//    _collectionView.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
     _collectionView.pagingEnabled = YES;
     _collectionView.showsVerticalScrollIndicator = NO;
     _collectionView.showsHorizontalScrollIndicator = NO;
-    _collectionView.scrollEnabled = NO;
-    _collectionView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
-    [self addSubview:_collectionView];
+    _collectionView.scrollsToTop = NO;
     [_collectionView registerClass:[TZTestCell class] forCellWithReuseIdentifier:@"TZTestCell"];
+
+    [self addSubview:_collectionView];
     
     WEAKSELF(wk);
     
+    UIView * backgroundView = [[UIView alloc]init];
+    backgroundView.backgroundColor = UICOLORRGB(0xf5f5f5);
+    [self addSubview:backgroundView];
+    
+     UILabel * titleLB= [UILabel new];
+     titleLB.font = [UIFont systemFontOfSize:14];
+     titleLB.textColor = [UIColor blackColor];
+     titleLB.text = title;
+    [backgroundView addSubview:titleLB];
+
+    [backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.right.top.equalTo(wk);
+        make.height.mas_equalTo(@40);
+    }];
+    
+    [titleLB mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerY.equalTo(backgroundView);
+        make.left.equalTo(backgroundView).offset(20);
+        
+    }];
+
+    
+    
     [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.right.bottom.equalTo(wk);
+        make.top.equalTo(backgroundView.mas_bottom);
+        make.right.bottom.equalTo(wk);
         make.left.equalTo(wk).offset(10);
+        make.height.mas_equalTo(@(87.5));
         
     }];
     
 }
 
-- (void)setSelectedPhotos:(NSMutableArray *)selectedPhotos{
-    
-    _selectedPhotos = selectedPhotos;
-    [self.collectionView reloadData];
-    
-    
-}
+
 
 
 #pragma mark UICollectionViewDataSource
@@ -110,20 +130,10 @@
         cell.deleteBtn.hidden = YES;
     } else {
         
-        PhotoModel * photo = _selectedPhotos[indexPath.row];
         
-        if (photo.isHistory) {//存在的图片
-           
-            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:photo.url]];
-        }else{//新增
-            
-             cell.imageView.image = photo.image;
-            
-        }
-        
-      
-//        cell.asset = _selectedAssets[indexPath.row];
-        cell.deleteBtn.hidden = NO;
+            cell.imageView.image = _selectedPhotos[indexPath.row];
+            cell.asset = _selectedAssets[indexPath.row];
+            cell.deleteBtn.hidden = NO;
     }
     cell.deleteBtn.tag = indexPath.row;
     [cell.deleteBtn addTarget:self action:@selector(deleteBtnClik:) forControlEvents:UIControlEventTouchUpInside];
@@ -134,31 +144,10 @@
 - (void)deleteBtnClik:(UIButton *)sender {
     
     
-    
-    PhotoModel * model = _selectedPhotos[sender.tag];
-    
-    if (model.isHistory) {
-        
+        [_selectedAssets removeObjectAtIndex:sender.tag];
         [_selectedPhotos removeObjectAtIndex:sender.tag];
         
-    }else{
-
-        NSInteger differences = _selectedPhotos.count- _selectedAssets.count;
-       
-            [_selectedAssets removeObjectAtIndex:sender.tag - differences ];
-            [_selectedPhotos removeObjectAtIndex:sender.tag];
-            
-    }
-    
-        
-  
-    
-    if (self.rowHeight) {
-        
-        self.rowHeight([self refreshRowHeightWithCount:_selectedPhotos.count]);
-        
-    }
-#pragma mark ----------------------------------------这里做处理
+ #pragma mark ----------------------------------------这里做处理
     
     //    [oldNamesArr ]
     [_collectionView performBatchUpdates:^{
@@ -267,24 +256,17 @@
 #pragma mark 拍照添加图片
 - (void)refreshCollectionViewWithAddedAsset:(id)asset image:(UIImage *)image {
     
-    PhotoModel * photo = [PhotoModel new];
-    photo.image = image;
-    photo.isHistory = NO;
     
     
     [_selectedAssets addObject:asset];
-    [_selectedPhotos addObject:photo];
+    [_selectedPhotos addObject:image];
     
     
 #pragma mark ---------------------------------------- 这里做处理
     //    [self uploadAccessory];
     [_collectionView reloadData];
-    if (self.rowHeight) {
-        
-        self.rowHeight([self refreshRowHeightWithCount:_selectedPhotos.count]);
-        
-    }
-
+   
+    
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -304,40 +286,13 @@
 
 #pragma mark - 图片选择页面完成了选择图片
 - (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray *)photos sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto {
+
     
-    
-    NSArray * array = [NSArray arrayWithArray:_selectedPhotos];
-    
-        for (PhotoModel * model in array) {
-            
-            if (!model.isHistory) {
-                
-                [_selectedPhotos removeObject:model];
-            }
-            
-        }
-        
-    for (UIImage * image in photos) {
-        
-        PhotoModel * photo = [PhotoModel new];
-        photo.image = image;
-        photo.isHistory = NO;
-        [_selectedPhotos addObject:photo];
-  
-        
-    }
-    
-    
-    
+    _selectedPhotos = [NSMutableArray arrayWithArray:photos];
     _selectedAssets = [NSMutableArray arrayWithArray:assets];
     _isSelectOriginalPhoto = isSelectOriginalPhoto;
     [_collectionView reloadData];
     
-    if (self.rowHeight) {
-        
-        self.rowHeight([self refreshRowHeightWithCount:_selectedPhotos.count]);
-        
-    }
     
     // 1.打印图片名字
 #pragma mark ---------------------------------------- 这里做处理
@@ -346,39 +301,6 @@
 }
 
 
-- (CGFloat)refreshRowHeightWithCount:(NSInteger)count{
-    
-    NSInteger number = count/4;
-    
-    CGFloat h = number * 87.5 +87.5 ;
-    
-    return h;
-    
-}
-
-
-
-- (NSMutableArray *)submitPhotos{
-    
-  
-    NSMutableArray * array = [NSMutableArray array];
-    
-    for (PhotoModel * model in _selectedPhotos) {
-        
-        if (!model.isHistory) {
-            
-            [array addObject:model.image];
-            
-        }
-        
-    }
-    
-    
-    _submitPhotos = array;
-    
-    
-    return _submitPhotos;
-}
 
 
 @end

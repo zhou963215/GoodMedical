@@ -144,11 +144,8 @@
     if (!_projectCell) {
         _projectCell = [[ZHPickerCell alloc]initWithRows:@[@"男",@"女"] rowValues:@[@"男",@"女"]];
         _projectCell.nameLB.text = @"选择项目";
-
         [_projectCell setPlaceholder:@"请选择项目"];
         [_projectCell upWidthChange:YES];
-        
- 
         
     }
     

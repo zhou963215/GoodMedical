@@ -43,6 +43,7 @@
         
         self.inupt.placeholder = tip;
     }
+    [self editStyle:YES];
     
     return self;
 }

@@ -10,6 +10,5 @@
 
 @interface ShoppingView : BasePopView
 
-@property (nonatomic, strong) NSMutableArray * selectArray;
 
 @end

@@ -1,17 +1,21 @@
 //
-//  ShoppingPopCell.m
+//  ProjectPopCell.m
 //  GoodMedical
 //
-//  Created by zhou on 2017/8/1.
+//  Created by zhou on 2017/8/18.
 //  Copyright © 2017年 zhou. All rights reserved.
 //
 
-#import "ShoppingPopCell.h"
-#import "ShoppingView.h"
+#import "InProjectPopCell.h"
+#import "ProjectInView.h"
 #import "TotalPriceModel.h"
-#import "ShoppingModel.h"
-@implementation ShoppingPopCell
 
+@interface InProjectPopCell ()
+@property(nonatomic,retain) UIView * line;
+
+@end
+
+@implementation InProjectPopCell
 
 - (instancetype)init {
     self = [super init];
@@ -46,14 +50,15 @@
     if (self.disabled) {
         return;
     }
-
+    
     UIView *superView = self.superview;
     while(![superView isMemberOfClass:[UITableView class]]){
         superView = superView.superview;
     }
     [superView endEditing:YES];
-
-    ShoppingView * shop = [[ShoppingView alloc]initAlertViewHeight:400];
+    
+    ProjectInView * inView = [[ProjectInView alloc]initAlertViewHeight:400];    
+    
     TotalPriceModel * total = [TotalPriceModel dataModel];
     [total.shopChangeArray removeAllObjects];
     
@@ -61,11 +66,11 @@
         
         total.shopChangeArray = [total.shopArray mutableCopy];
     }
-    
-       
-    shop.selectData =  ^void(NSArray * data){
-        
 
+    
+    inView.selectData =  ^void(NSArray * data){
+        
+        
         UITableView * tab = (UITableView *)self.superview.superview;
         [tab reloadData];
         NSLog(@"-----%@",data);
@@ -93,9 +98,20 @@
     }];
     
     self.label.font = [UIFont systemFontOfSize:14];
+    self.line = [[UIView alloc]init];
+    self.line.backgroundColor = UICOLORRGB(0xe8e7e7);
+    [self addSubview:self.line];
+    
+    [self.line mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.equalTo(wk).offset(10);
+        make.right.equalTo(wk).offset(-10);
+        make.height.mas_equalTo(@0.5);
+        make.bottom.mas_equalTo(wk.mas_bottom);
+        
+    }];
+
 }
-
-
 
 
 

@@ -151,6 +151,8 @@
 
 - (void)clickBgViewToHide{
     
+    
+    
     [self hide:YES];
     
 }

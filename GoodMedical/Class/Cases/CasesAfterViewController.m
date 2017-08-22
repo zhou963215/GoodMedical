@@ -13,6 +13,7 @@
 @interface CasesAfterViewController ()
 
 @property (nonatomic, strong) CasesAfterHelper * afertHelper;
+
 @end
 
 @implementation CasesAfterViewController
@@ -38,6 +39,8 @@
         
     }];
 
+    
+    
     UIView * backgroundView = [[UIView alloc]init];
     backgroundView.backgroundColor = GAYCOLOR;
     [self.view addSubview:backgroundView];

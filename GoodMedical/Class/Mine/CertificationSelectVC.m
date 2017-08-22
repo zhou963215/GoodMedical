@@ -7,7 +7,8 @@
 //
 
 #import "CertificationSelectVC.h"
-
+#import "DoctorCertificationVC.h"
+#import "ChannelCertificationVC.h"
 @interface CertificationSelectVC ()
 
 @end
@@ -74,7 +75,7 @@
     
     if (sender.tag ==1) {
       //医生认证
-        
+        [self.navigationController pushViewController:[DoctorCertificationVC new] animated:YES];
         
     }else{
         

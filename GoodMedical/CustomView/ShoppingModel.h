@@ -16,4 +16,9 @@
 @property (nonatomic, assign) CGFloat  price;
 @property (nonatomic, assign) int buyNumber;
 
+
+
+@property (nonatomic, assign) NSString * inPrice;
+@property (nonatomic, assign) BOOL isPrice;
+@property (nonatomic, assign) BOOL isRemove;
 @end

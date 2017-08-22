@@ -192,7 +192,7 @@
         PhotoModel * model = [PhotoModel new];
         model.isHistory = YES;
         model.url = @"http://picture.youth.cn/dmzb/201305/W020130514542662922703.jpg";
-        NSArray * arr = @[model];
+//        NSArray * arr = @[model];
         
         NSMutableArray * array = [NSMutableArray arrayWithObject:model];
         

@@ -11,6 +11,9 @@
 @interface TotalPriceModel : NSObject
 
 @property (nonatomic, strong) NSMutableArray * shopArray;
+@property (nonatomic, strong) NSMutableArray * shopChangeArray;
+
+
 @property (nonatomic, copy) NSString * starCode;
 @property (nonatomic, copy) NSString * endCode;
 @property (nonatomic, assign) BOOL isSuccess;

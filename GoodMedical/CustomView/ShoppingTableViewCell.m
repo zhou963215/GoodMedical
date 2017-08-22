@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *reductionButton;
 
 @property (nonatomic, strong) ShoppingModel * dataModel;
+@property (nonatomic, strong) TotalPriceModel * total;
 
 @end
 
@@ -29,7 +30,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-
+    _total = [TotalPriceModel dataModel];
     self.addButton.layer.cornerRadius = 9;
     self.reductionButton.layer.cornerRadius = 9;
 
@@ -37,9 +38,8 @@
 
 - (void)setUpDataWithModel:(ShoppingModel *)model{
     
-    TotalPriceModel * total = [TotalPriceModel dataModel];
     
-    for (ShoppingModel * selectModel in total.shopArray) {
+    for (ShoppingModel * selectModel in _total.shopArray) {
         
         if ([selectModel.name isEqualToString:model.name]) {
             
@@ -68,12 +68,16 @@
 - (IBAction)addClick:(id)sender {
     
     int number = [self.buyNumberLB.text intValue];
+    _dataModel.buyNumber++;
+    
+    if (number == 0) {
+    
+       [ _total.shopChangeArray addObject:_dataModel];
+        
+    }
     
     number ++;
-    
     self.buyNumberLB.text = [NSString stringWithFormat:@"%d",number];
-    
-    _dataModel.buyNumber = number;
     
     
     
@@ -85,19 +89,56 @@
     
     int number = [self.buyNumberLB.text intValue];
 
+    
     if (number ==0) {
+        
         
         return;
     }
     
-    if (number > 0) {
+    _dataModel.buyNumber--;
+    
+    if (_dataModel.buyNumber == 0) {
         
-        number--;
+        
+        NSMutableArray * array = [_total.shopChangeArray mutableCopy];
+        
+        for (ShoppingModel * model in array) {
+            
+            if ([model.name isEqualToString:_dataModel.name]) {
+                
+                [_total.shopChangeArray removeObject:model];
+                
+            }
+        }
+        
+        
+        
+    }else{
+        
+        
+        for (ShoppingModel * model in _total.shopChangeArray) {
+            
+            if ([model.name isEqualToString:_dataModel.name]) {
+                
+                model.buyNumber = _dataModel.buyNumber;
+                
+                
+            }
+            
+            
+        }
+        
+        
     }
+    
+    
+    number --;
+    
+    
     
     self.buyNumberLB.text = [NSString stringWithFormat:@"%d",number];
     
-    _dataModel.buyNumber = number;
     
 
 }

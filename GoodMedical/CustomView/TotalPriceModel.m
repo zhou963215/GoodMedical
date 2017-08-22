@@ -20,6 +20,7 @@
     dispatch_once(&predicate, ^{
         dataModel = [[self alloc] init];
         dataModel.shopArray = [NSMutableArray array];
+        dataModel.shopChangeArray = [NSMutableArray array];
     });
     return dataModel;
     
@@ -36,7 +37,6 @@
         CGFloat prcie = model.price * model.buyNumber;
         self.shopPrice +=prcie;
         
-        
     }
     
     
@@ -51,7 +51,9 @@
     self.timePrice = 0;
     self.shopPrice = 0;
     [self.shopArray removeAllObjects];
+    [self.shopChangeArray removeAllObjects];
     self.dateString = [self defaultDate];
+    
     
 }
 - (void)backZero{
