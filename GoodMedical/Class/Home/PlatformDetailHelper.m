@@ -309,31 +309,31 @@
 
 - (void)nextstep:(UIButton *)sender{
     
-    if ([_nameInputCell.value isEqualToString:@""]) {
-        
-        
-        [ZHHud initWithMessage:@"请输入患者姓名"];
-        return;
-    }
-    if ([_phoneInputCell.value isEqualToString:@""]) {
-        
-        [ZHHud initWithMessage:@"请输入患者电话号码"];
-        return;
-    }
-    if (!(_operation.values.count>0)) {
-        
-        [ZHHud initWithMessage:@"请选择手术分类"];
-        return;
-    }
-    if (!(_project.values.count > 0)) {
-        
-        [ZHHud initWithMessage:@"请选择手术项目"];
-        return;
-    }
+//    if ([_nameInputCell.value isEqualToString:@""]) {
+//        
+//        
+//        [ZHHud initWithMessage:@"请输入患者姓名"];
+//        return;
+//    }
+//    if ([_phoneInputCell.value isEqualToString:@""]) {
+//        
+//        [ZHHud initWithMessage:@"请输入患者电话号码"];
+//        return;
+//    }
+//    if (!(_operation.values.count>0)) {
+//        
+//        [ZHHud initWithMessage:@"请选择手术分类"];
+//        return;
+//    }
+//    if (!(_project.values.count > 0)) {
+//        
+//        [ZHHud initWithMessage:@"请选择手术项目"];
+//        return;
+//    }
     
-    NSDictionary * dict = @{@"name":_nameInputCell.value,@"phone":_phoneInputCell.value,@"opretion":_operation.values[0],@"project":_project.values[0],@"shop":_total.shopArray,@"area":_textCell.textString};
-    
-    NSLog(@"单休根本不够休息-------%@",dict);
+//    NSDictionary * dict = @{@"name":_nameInputCell.value,@"phone":_phoneInputCell.value,@"opretion":_operation.values[0],@"project":_project.values[0],@"shop":_total.shopArray,@"area":_textCell.textString};
+//    
+//    NSLog(@"单休根本不够休息-------%@",dict);
     
     [self.tableView.navigationController pushViewController:[PayDetailViewController new] animated:YES];
     

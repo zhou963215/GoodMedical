@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="256" id="KGk-i7-Jjw" customClass="TopUpTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="256"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="255.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充值优惠活动:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ows-gq-BOZ">
+                        <rect key="frame" x="20" y="10" width="90" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.63137254899999995" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="------------------------------------------------------------" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRi-ZG-7QQ">
+                        <rect key="frame" x="20" y="32" width="280" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.17957795800000001" green="0.79238113700000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充值满500送100优惠券,活动有效期:2017-08-23 16:06 至2017-08-30 16:06" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUV-8V-ghC">
+                        <rect key="frame" x="20" y="54" width="280" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.63137254899999995" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---------------------------------------------------------------" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcL-Z3-c6X">
+                        <rect key="frame" x="20" y="88" width="280" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.17957795800000001" green="0.79238113700000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提示:充值送优惠活动不能叠加,若有多个活动,则系统会自动选出最优的一个" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lT-bj-o1u">
+                        <rect key="frame" x="20" y="110" width="280" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="247" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83I-Xm-uwg">
+                        <rect key="frame" x="20" y="159" width="280" height="40"/>
+                        <color key="backgroundColor" red="0.17957795800000001" green="0.79238113700000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="bG0-Nt-u5h"/>
+                        </constraints>
+                        <state key="normal" title="立即充值">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="topUpClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MJT-6D-oaK"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="246" text="1.最低充值金额为10元!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udM-rn-MGb">
+                        <rect key="frame" x="20" y="219" width="280" height="26"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="2lT-bj-o1u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="0XD-qV-0FX"/>
+                    <constraint firstAttribute="trailing" secondItem="nRi-ZG-7QQ" secondAttribute="trailing" constant="20" id="4uD-dg-S2z"/>
+                    <constraint firstAttribute="trailing" secondItem="2lT-bj-o1u" secondAttribute="trailing" constant="20" id="58u-Aj-Q62"/>
+                    <constraint firstItem="MUV-8V-ghC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="9BP-k0-DC2"/>
+                    <constraint firstItem="83I-Xm-uwg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="9x2-WV-gGm"/>
+                    <constraint firstItem="83I-Xm-uwg" firstAttribute="top" secondItem="2lT-bj-o1u" secondAttribute="bottom" constant="20" id="AUb-Dk-O1v"/>
+                    <constraint firstAttribute="bottom" secondItem="udM-rn-MGb" secondAttribute="bottom" constant="10" id="LdX-2l-gEW"/>
+                    <constraint firstItem="RcL-Z3-c6X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="N7X-Kx-iR5"/>
+                    <constraint firstItem="2lT-bj-o1u" firstAttribute="top" secondItem="RcL-Z3-c6X" secondAttribute="bottom" constant="5" id="Rdx-Z5-fXi"/>
+                    <constraint firstItem="RcL-Z3-c6X" firstAttribute="top" secondItem="MUV-8V-ghC" secondAttribute="bottom" constant="5" id="VYZ-j3-vlC"/>
+                    <constraint firstItem="ows-gq-BOZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="YD5-fm-wqw"/>
+                    <constraint firstAttribute="trailing" secondItem="83I-Xm-uwg" secondAttribute="trailing" constant="20" id="cr3-8r-Kpg"/>
+                    <constraint firstItem="nRi-ZG-7QQ" firstAttribute="top" secondItem="ows-gq-BOZ" secondAttribute="bottom" constant="5" id="iF4-84-ybH"/>
+                    <constraint firstItem="MUV-8V-ghC" firstAttribute="top" secondItem="nRi-ZG-7QQ" secondAttribute="bottom" constant="5" id="iHZ-JP-4Ib"/>
+                    <constraint firstItem="nRi-ZG-7QQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="mQ9-L9-6cE"/>
+                    <constraint firstItem="ows-gq-BOZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nwY-Lc-wvL"/>
+                    <constraint firstItem="udM-rn-MGb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="oxL-ff-id7"/>
+                    <constraint firstAttribute="trailing" secondItem="udM-rn-MGb" secondAttribute="trailing" constant="20" id="t5E-YE-CwF"/>
+                    <constraint firstAttribute="trailing" secondItem="RcL-Z3-c6X" secondAttribute="trailing" constant="20" id="yii-dJ-tuy"/>
+                    <constraint firstAttribute="trailing" secondItem="MUV-8V-ghC" secondAttribute="trailing" constant="20" id="ymE-W9-Ra0"/>
+                    <constraint firstItem="udM-rn-MGb" firstAttribute="top" secondItem="83I-Xm-uwg" secondAttribute="bottom" constant="20" id="yuQ-LI-K6o"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLB" destination="MUV-8V-ghC" id="che-NB-Nms"/>
+                <outlet property="promptLB" destination="udM-rn-MGb" id="Zye-4z-lKu"/>
+                <outlet property="topUpBtn" destination="83I-Xm-uwg" id="20o-wA-mJz"/>
+            </connections>
+            <point key="canvasLocation" x="-83" y="146"/>
+        </tableViewCell>
+    </objects>
+</document>

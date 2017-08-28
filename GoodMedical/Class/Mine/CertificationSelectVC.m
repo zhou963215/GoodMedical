@@ -9,6 +9,7 @@
 #import "CertificationSelectVC.h"
 #import "DoctorCertificationVC.h"
 #import "ChannelCertificationVC.h"
+#import "ChannelCertificationVC.h"
 @interface CertificationSelectVC ()
 
 @end
@@ -80,7 +81,7 @@
     }else{
         
        //渠道认证
-        
+        [self.navigationController pushViewController:[ChannelCertificationVC new] animated:YES];
         
     }
     

@@ -9,6 +9,7 @@
 #import "DoctorCardHelper.h"
 #import "InputTableViewCell.h"
 #import "DoctorPhotoTableViewCell.h"
+#import "AgreedView.h"
 @interface DoctorCardHelper ()
 
 @property (nonatomic, strong) NSArray * rows;
@@ -20,6 +21,7 @@
 
 @property (nonatomic, strong) DoctorPhotoTableViewCell * cardPhotoCell;
 
+@property (nonatomic, strong) AgreedView * agreedView;
 
 @end
 
@@ -188,11 +190,17 @@
 
 - (UIView * )creatBottomView{
     
-    UIView * backgroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 100)];
+    
+    
+    UIView * backgroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 150)];
     backgroundView.backgroundColor = [UIColor whiteColor];
     UIView * line = [UIView new];
     line.backgroundColor = UICOLORRGB(0xf5f5f5);
     [backgroundView addSubview:line];
+    
+    _agreedView = [AgreedView new];
+    [backgroundView addSubview:_agreedView];
+    
     
     UIButton * button = [UIButton buttonWithType: UIButtonTypeCustom];
     [button setTintColor:[UIColor whiteColor]];
@@ -207,6 +215,13 @@
         
         make.top.left.right.equalTo(backgroundView);
         make.height.mas_equalTo(@1);
+    }];
+
+    [_agreedView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(backgroundView).offset(30);
+        make.left.right.equalTo(backgroundView);
+        make.height.mas_equalTo(@40);
     }];
     
     [button mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -224,7 +239,7 @@
     
     if (self.nextStep) {
         
-        self.nextStep(2);
+        self.nextStep(3);
     }
     
     

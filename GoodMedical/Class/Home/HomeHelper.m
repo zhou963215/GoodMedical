@@ -10,6 +10,7 @@
 #import "HomeCollectionViewCell.h"
 #import "PlatformeViewController.h"
 #import "CasesViewController.h"
+#import "AppointmentFVC.h"
 @interface HomeHelper ()
 @property(nonatomic,strong) UICollectionView * collection;
 
@@ -28,7 +29,7 @@
     
     if (self = [super init]) {
         
-        NSArray * arr = @[@{@"image":@"o_3",@"name":@"病例库"},@{@"image":@"o_3",@"name":@"平台预约"},@{@"image":@"o_3",@"name":@"我的患者"}];
+        NSArray * arr = @[@{@"image":@"o_3",@"name":@"病例库"},@{@"image":@"o_3",@"name":@"平台下单"},@{@"image":@"o-3",@"name":@"平台预约"},@{@"image":@"o_3",@"name":@"我的患者"}];
         _apList = arr;
         
         
@@ -99,14 +100,16 @@
         }
             break;
         case 1:{
-            //回忆
+            //平台下单
             [self.collection.navigationController pushViewController:[PlatformeViewController new] animated:YES];
 
         }
             break;
         case 2:{
             //课堂
-            //[self.cyl_tabBarController cyl_popSelectTabBarChildViewControllerAtIndex:0];
+            [self.collection.navigationController pushViewController:[AppointmentFVC new] animated:YES];
+
+
         }
             break;
                default:

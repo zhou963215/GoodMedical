@@ -9,6 +9,9 @@
 #import "MineHelper.h"
 #import "MineTableViewCell.h"
 #import "CertificationSelectVC.h"
+#import "DetailMineViewController.h"
+#import "AccountCenterVC.h"
+#import "MineOrderViewController.h"
 @interface MineHelper ()
 @property (strong, nonatomic) UIImageView *imageView;
 
@@ -57,8 +60,8 @@
     
     
     
-     self.rows = @[@[@{@"name":@"认证入住",@"detail":@"还未认证"}],@[@{@"name":@"预约订单",@"detail":@"3"},@{@"name":@"绑定手机号",@"detail":@"13838838438"}],@[@{@"name":@"设置",@"detail":@""},@{@"name":@"关于我们",@"detail":@""},@{@"name":@"客服电话",@"detail":@"400-001-2018"}]];
-    
+//     self.rows = @[@[@{@"name":@"认证入住",@"detail":@"还未认证"}],@[@{@"name":@"预约订单",@"detail":@"3"},@{@"name":@"绑定手机号",@"detail":@"13838838438"}],@[@{@"name":@"设置",@"detail":@""},@{@"name":@"关于我们",@"detail":@""},@{@"name":@"客服电话",@"detail":@"400-001-2018"}]];
+    self.rows = @[@[@{@"name":@"账户中心",@"detail":@""}],@[@{@"name":@"客户端订单",@"detail":@""},@{@"name":@"医生端订单",@"detail":@""},@{@"name":@"邀请患者",@"detail":@""},@{@"name":@"我的主页",@"detail":@""}],@[@{@"name":@"我的预约订单",@"detail":@"3"},@{@"name":@"我的预约",@"detail":@"3"},@{@"name":@"绑定手机号",@"detail":@"13838838438"}],@[@{@"name":@"包月会员购买",@"detail":@""},@{@"name":@"抵用券",@"detail":@"0张可用"},@{@"name":@"设置",@"detail":@""},@{@"name":@"关于我们",@"detail":@""},@{@"name":@"客服电话",@"detail":@"400-001-2018"}]];
     
 }
 
@@ -115,8 +118,19 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    NSDictionary * dict = _rows[indexPath.section][indexPath.row];
     
-    [self.tableView.navigationController pushViewController:[CertificationSelectVC new] animated:YES];
+    if ([dict[@"name"]isEqualToString:@"账户中心"]) {
+        
+        [self.tableView.navigationController pushViewController:[AccountCenterVC new] animated:YES];
+        
+    } if ([dict[@"name"]isEqualToString:@"我的预约订单"]) {
+        
+        [self.tableView.navigationController pushViewController:[MineOrderViewController new] animated:YES];
+        
+    }
+    
+//    [self.tableView.navigationController pushViewController:[CertificationSelectVC new] animated:YES];
     
 }
 
@@ -143,6 +157,7 @@
     if (_imageView == nil) {
         _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -200, WIDTH, 200)];
         _imageView.image = [UIImage imageNamed:@"a1.jpg"];
+        _imageView.userInteractionEnabled = YES;
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
         _imageView.clipsToBounds = YES;//删除多余图片。（不加这个得话。第一行被遮盖)
         
@@ -160,6 +175,8 @@
     
     UIView * view = [UIView new];
     view.backgroundColor =  UICOLORRGB(0xf5f5f5);
+    view.userInteractionEnabled  = YES;
+
     [_imageView addSubview:view];
     
     UIView * bottom = [UIView new];
@@ -205,6 +222,21 @@
         make.height.mas_equalTo(44);
     }];
     
+    
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
+    tap.numberOfTapsRequired=1;//单击
+    tap.numberOfTouchesRequired=1;//单点触碰
+    [view addGestureRecognizer:tap];
+    
+    
+    
+}
+
+- (void)tapClick:(id)sender{
+    
+    NSLog(@"每天都在想着下班回家睡觉");
+    
+    [self.tableView.navigationController pushViewController:[DetailMineViewController new] animated:YES];
     
     
 }

@@ -19,7 +19,7 @@
     [super viewDidLoad];
 
 
-    self.navigationItem.title = @"平台预约";
+    self.navigationItem.title = @"平台下单";
     [self addHelper];
     
 }

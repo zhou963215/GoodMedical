@@ -23,9 +23,12 @@
     [super viewDidLoad];
     
 
-    NSArray * arr =  @[ @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                        @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                        @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"];
+    NSArray * arr = @[@"http://picture.youth.cn/dmzb/201305/W020130514542662922703.jpg",
+                      @"http://img5q.duitang.com/uploads/item/201504/15/20150415H5703_nusHC.jpeg",
+                      @"http://img5q.duitang.com/uploads/item/201407/31/20140731202921_Qudzv.thumb.700_0.png",
+                      @"http://2t.5068.com/uploads/allimg/150328/1033006409-5.png",
+                      @"http://im5.tongbu.com/wallpaper/20120606/013becf7-0.jpg.488_488.jpg"];
+    
     
 
     _sdcSoure = [NSMutableArray arrayWithArray:arr];

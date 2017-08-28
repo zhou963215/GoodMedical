@@ -78,6 +78,11 @@
     [self.scrollView addSubview:_inHelper.tableView];
     
     _cardHelper = [DoctorCardHelper blog];
+    _cardHelper.nextStep = ^(NSInteger count) {
+        
+        [wk submit];
+        
+    };
     [self.scrollView addSubview:_cardHelper.tableView];
     
     
@@ -134,6 +139,13 @@
     
     
     
+}
+
+- (void)submit{
+    
+
+    
+    [self backLastView];
 }
 
 - (void)backLastView{
