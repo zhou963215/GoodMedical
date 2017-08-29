@@ -15,6 +15,9 @@
 @property (nonatomic, strong) NSArray * rows;
 @property (nonatomic, strong) UILabel * balanceLB;
 @property (nonatomic, strong) YYLabel * freezeLB;
+@property (nonatomic, strong) UILabel * todayDividedLB;
+@property (nonatomic, strong) UILabel * dividedLB;
+
 
 @end
 
@@ -126,6 +129,46 @@
     [view addSubview:_freezeLB];
     
     
+    UIView  * leftView = [UIView new];
+//    leftView.backgroundColor = [UIColor clearColor];
+//    leftView.alpha = 0.3;
+    [view addSubview:leftView];
+    
+    UILabel * leftTitle = [UILabel new];
+    leftTitle.text = @"今日分成(元)";
+    leftTitle.textColor = [UIColor lightGrayColor];
+    leftTitle.font  = [UIFont systemFontOfSize:12];
+    [leftView addSubview:leftTitle];
+    
+    _todayDividedLB = [UILabel new];
+    _todayDividedLB.font = [UIFont systemFontOfSize:12];
+    _todayDividedLB.textColor = [UIColor whiteColor];
+    _todayDividedLB.text = @"0.00";
+    [leftView addSubview:_todayDividedLB];
+    
+    
+    
+    UIView  * rightView = [UIView new];
+//    rightView.backgroundColor = [UIColor clearColor];
+//    rightView.alpha = 0.3;
+    [view addSubview:rightView];
+    
+    UILabel * rightTitle = [UILabel new];
+    rightTitle.text = @"总分成(元)";
+    rightTitle.textColor = [UIColor lightGrayColor];
+    rightTitle.font  = [UIFont systemFontOfSize:12];
+    [rightView addSubview:rightTitle];
+    
+    _dividedLB = [UILabel new];
+    _dividedLB.font = [UIFont systemFontOfSize:12];
+    _dividedLB.textColor = [UIColor whiteColor];
+    _dividedLB.text = @"100.00";
+    [rightView addSubview:_dividedLB];
+    
+
+    
+    
+    
     [titleLB mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.centerX.equalTo(view);
@@ -138,15 +181,59 @@
     [_balanceLB mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.centerX.equalTo(view);
-        make.top.equalTo(titleLB.mas_bottom).offset(30);
+        make.top.equalTo(titleLB.mas_bottom).offset(20);
 
     }];
     
     [_freezeLB mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.centerX.equalTo(view);
-        make.top.equalTo(_balanceLB.mas_bottom).offset(40);
+        make.top.equalTo(_balanceLB.mas_bottom).offset(20);
     }];
+    
+    
+    [leftView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.bottom.equalTo(view);
+        make.width.equalTo(view).multipliedBy(0.5);
+        
+    }];
+    
+    [leftTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerX.equalTo(leftView);
+        make.top.equalTo(leftView).offset(10);
+    }];
+    
+    [_todayDividedLB mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerX.equalTo(leftView);
+        make.top.equalTo(leftTitle.mas_bottom).offset(10);
+        make.bottom.equalTo(leftView).offset(-10);
+        
+    }];
+    
+    [rightView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.right.bottom.equalTo(view);
+        make.width.equalTo(view).multipliedBy(0.5);
+        
+    }];
+    
+    [rightTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerX.equalTo(rightView);
+        make.top.equalTo(rightView).offset(10);
+    }];
+    
+    [_dividedLB mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerX.equalTo(rightView);
+        make.top.equalTo(rightTitle.mas_bottom).offset(10);
+        make.bottom.equalTo(rightView).offset(-10);
+        
+    }];
+    
     
     return view;
     

@@ -57,6 +57,19 @@
 		CB96F3D11F540F9D001AD284 /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96F3CF1F540F9D001AD284 /* OrderTableViewCell.m */; };
 		CB96F3D21F540F9D001AD284 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB96F3D01F540F9D001AD284 /* OrderTableViewCell.xib */; };
 		CB96F3D61F541CFE001AD284 /* OrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96F3D51F541CFE001AD284 /* OrderDetailViewController.m */; };
+		CB96F3D91F54F6FB001AD284 /* OrderDetailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96F3D81F54F6FB001AD284 /* OrderDetailHelper.m */; };
+		CB96F3DE1F55000A001AD284 /* OrderDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96F3DC1F55000A001AD284 /* OrderDetailTableViewCell.m */; };
+		CB96F3DF1F55000A001AD284 /* OrderDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB96F3DD1F55000A001AD284 /* OrderDetailTableViewCell.xib */; };
+		CB96F3E31F550333001AD284 /* ConsumablesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96F3E11F550333001AD284 /* ConsumablesTableViewCell.m */; };
+		CB96F3E41F550333001AD284 /* ConsumablesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB96F3E21F550333001AD284 /* ConsumablesTableViewCell.xib */; };
+		CB96F3E81F55084E001AD284 /* OrderPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96F3E61F55084E001AD284 /* OrderPriceTableViewCell.m */; };
+		CB96F3E91F55084E001AD284 /* OrderPriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB96F3E71F55084E001AD284 /* OrderPriceTableViewCell.xib */; };
+		CB96F3ED1F554BE2001AD284 /* MineAppointmentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96F3EC1F554BE2001AD284 /* MineAppointmentVC.m */; };
+		CB96F3F01F554EA3001AD284 /* MineAppointmentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96F3EF1F554EA3001AD284 /* MineAppointmentHelper.m */; };
+		CB96F3F51F5550AF001AD284 /* AppointmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96F3F31F5550AF001AD284 /* AppointmentTableViewCell.m */; };
+		CB96F3F61F5550AF001AD284 /* AppointmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB96F3F41F5550AF001AD284 /* AppointmentTableViewCell.xib */; };
+		CB96F3FA1F5554BC001AD284 /* AppointmentDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96F3F91F5554BC001AD284 /* AppointmentDetailVC.m */; };
+		CB96F3FD1F555500001AD284 /* AppointmentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96F3FC1F555500001AD284 /* AppointmentHelper.m */; };
 		CB990D951F3169A100B8AD40 /* BSLCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D851F3169A100B8AD40 /* BSLCalendar.m */; };
 		CB990D961F3169A100B8AD40 /* BSLMonthCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D881F3169A100B8AD40 /* BSLMonthCollectionView.m */; };
 		CB990D971F3169A100B8AD40 /* CalendaDaysCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB990D8A1F3169A100B8AD40 /* CalendaDaysCell.m */; };
@@ -303,6 +316,28 @@
 		CB96F3D01F540F9D001AD284 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		CB96F3D41F541CFE001AD284 /* OrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailViewController.h; sourceTree = "<group>"; };
 		CB96F3D51F541CFE001AD284 /* OrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailViewController.m; sourceTree = "<group>"; };
+		CB96F3D71F54F6FB001AD284 /* OrderDetailHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailHelper.h; sourceTree = "<group>"; };
+		CB96F3D81F54F6FB001AD284 /* OrderDetailHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailHelper.m; sourceTree = "<group>"; };
+		CB96F3DB1F55000A001AD284 /* OrderDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailTableViewCell.h; sourceTree = "<group>"; };
+		CB96F3DC1F55000A001AD284 /* OrderDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailTableViewCell.m; sourceTree = "<group>"; };
+		CB96F3DD1F55000A001AD284 /* OrderDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderDetailTableViewCell.xib; sourceTree = "<group>"; };
+		CB96F3E01F550333001AD284 /* ConsumablesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumablesTableViewCell.h; sourceTree = "<group>"; };
+		CB96F3E11F550333001AD284 /* ConsumablesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsumablesTableViewCell.m; sourceTree = "<group>"; };
+		CB96F3E21F550333001AD284 /* ConsumablesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsumablesTableViewCell.xib; sourceTree = "<group>"; };
+		CB96F3E51F55084E001AD284 /* OrderPriceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderPriceTableViewCell.h; sourceTree = "<group>"; };
+		CB96F3E61F55084E001AD284 /* OrderPriceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPriceTableViewCell.m; sourceTree = "<group>"; };
+		CB96F3E71F55084E001AD284 /* OrderPriceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderPriceTableViewCell.xib; sourceTree = "<group>"; };
+		CB96F3EB1F554BE2001AD284 /* MineAppointmentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineAppointmentVC.h; sourceTree = "<group>"; };
+		CB96F3EC1F554BE2001AD284 /* MineAppointmentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineAppointmentVC.m; sourceTree = "<group>"; };
+		CB96F3EE1F554EA3001AD284 /* MineAppointmentHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineAppointmentHelper.h; sourceTree = "<group>"; };
+		CB96F3EF1F554EA3001AD284 /* MineAppointmentHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineAppointmentHelper.m; sourceTree = "<group>"; };
+		CB96F3F21F5550AF001AD284 /* AppointmentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentTableViewCell.h; sourceTree = "<group>"; };
+		CB96F3F31F5550AF001AD284 /* AppointmentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentTableViewCell.m; sourceTree = "<group>"; };
+		CB96F3F41F5550AF001AD284 /* AppointmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentTableViewCell.xib; sourceTree = "<group>"; };
+		CB96F3F81F5554BC001AD284 /* AppointmentDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentDetailVC.h; sourceTree = "<group>"; };
+		CB96F3F91F5554BC001AD284 /* AppointmentDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentDetailVC.m; sourceTree = "<group>"; };
+		CB96F3FB1F555500001AD284 /* AppointmentHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentHelper.h; sourceTree = "<group>"; };
+		CB96F3FC1F555500001AD284 /* AppointmentHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentHelper.m; sourceTree = "<group>"; };
 		CB990D841F3169A100B8AD40 /* BSLCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLCalendar.h; sourceTree = "<group>"; };
 		CB990D851F3169A100B8AD40 /* BSLCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLCalendar.m; sourceTree = "<group>"; };
 		CB990D871F3169A100B8AD40 /* BSLMonthCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLMonthCollectionView.h; sourceTree = "<group>"; };
@@ -818,6 +853,7 @@
 		CB120D921F2727270091477C /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				CB96F3EA1F554ACC001AD284 /* MineAppointment */,
 				CB96F3C61F54090A001AD284 /* MineOrder */,
 				CBE271621F517D8C00811506 /* AccountCenter */,
 				CBFB627A1F4D680100DA946A /* DetailMine */,
@@ -974,10 +1010,63 @@
 		CB96F3D31F541C9E001AD284 /* MineOrderDetail */ = {
 			isa = PBXGroup;
 			children = (
+				CB96F3DA1F54FFEC001AD284 /* view */,
 				CB96F3D41F541CFE001AD284 /* OrderDetailViewController.h */,
 				CB96F3D51F541CFE001AD284 /* OrderDetailViewController.m */,
+				CB96F3D71F54F6FB001AD284 /* OrderDetailHelper.h */,
+				CB96F3D81F54F6FB001AD284 /* OrderDetailHelper.m */,
 			);
 			name = MineOrderDetail;
+			sourceTree = "<group>";
+		};
+		CB96F3DA1F54FFEC001AD284 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CB96F3DB1F55000A001AD284 /* OrderDetailTableViewCell.h */,
+				CB96F3DC1F55000A001AD284 /* OrderDetailTableViewCell.m */,
+				CB96F3DD1F55000A001AD284 /* OrderDetailTableViewCell.xib */,
+				CB96F3E01F550333001AD284 /* ConsumablesTableViewCell.h */,
+				CB96F3E11F550333001AD284 /* ConsumablesTableViewCell.m */,
+				CB96F3E21F550333001AD284 /* ConsumablesTableViewCell.xib */,
+				CB96F3E51F55084E001AD284 /* OrderPriceTableViewCell.h */,
+				CB96F3E61F55084E001AD284 /* OrderPriceTableViewCell.m */,
+				CB96F3E71F55084E001AD284 /* OrderPriceTableViewCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CB96F3EA1F554ACC001AD284 /* MineAppointment */ = {
+			isa = PBXGroup;
+			children = (
+				CB96F3F71F555494001AD284 /* AppointmentDetail */,
+				CB96F3F11F55500C001AD284 /* view */,
+				CB96F3EB1F554BE2001AD284 /* MineAppointmentVC.h */,
+				CB96F3EC1F554BE2001AD284 /* MineAppointmentVC.m */,
+				CB96F3EE1F554EA3001AD284 /* MineAppointmentHelper.h */,
+				CB96F3EF1F554EA3001AD284 /* MineAppointmentHelper.m */,
+			);
+			name = MineAppointment;
+			sourceTree = "<group>";
+		};
+		CB96F3F11F55500C001AD284 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CB96F3F21F5550AF001AD284 /* AppointmentTableViewCell.h */,
+				CB96F3F31F5550AF001AD284 /* AppointmentTableViewCell.m */,
+				CB96F3F41F5550AF001AD284 /* AppointmentTableViewCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CB96F3F71F555494001AD284 /* AppointmentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CB96F3F81F5554BC001AD284 /* AppointmentDetailVC.h */,
+				CB96F3F91F5554BC001AD284 /* AppointmentDetailVC.m */,
+				CB96F3FB1F555500001AD284 /* AppointmentHelper.h */,
+				CB96F3FC1F555500001AD284 /* AppointmentHelper.m */,
+			);
+			name = AppointmentDetail;
 			sourceTree = "<group>";
 		};
 		CB990D831F3169A100B8AD40 /* BSLCalendar */ = {
@@ -1674,6 +1763,7 @@
 				CB9A5ED11F44224A0031803D /* Address.plist in Resources */,
 				CB990E331F32F6A500B8AD40 /* DetailPlatformCell.xib in Resources */,
 				CBA2FF331F41AAA30019883B /* FunctionTableViewCell.xib in Resources */,
+				CB96F3E41F550333001AD284 /* ConsumablesTableViewCell.xib in Resources */,
 				CBD9F1AA1F346E510074FB35 /* PriceDetailCell.xib in Resources */,
 				CB120D661F271DCE0091477C /* LaunchScreen.storyboard in Resources */,
 				CBD9F1B41F35A0B20074FB35 /* PayOrderTableViewCell.xib in Resources */,
@@ -1681,12 +1771,15 @@
 				CBD9F1BD1F35A23A0074FB35 /* CasesTableViewCell.xib in Resources */,
 				CBE3B4691F28748A00E47D54 /* TZImagePickerController.bundle in Resources */,
 				CB96F3C51F53FA1F001AD284 /* TopDownTableViewCell.xib in Resources */,
+				CB96F3E91F55084E001AD284 /* OrderPriceTableViewCell.xib in Resources */,
 				CB120D631F271DCE0091477C /* Assets.xcassets in Resources */,
+				CB96F3F61F5550AF001AD284 /* AppointmentTableViewCell.xib in Resources */,
 				CB120D611F271DCE0091477C /* Main.storyboard in Resources */,
 				CBE3B54A1F2C8F7500E47D54 /* OperationTableViewCell.xib in Resources */,
 				CB990E231F31AEF500B8AD40 /* MapTableViewCell.xib in Resources */,
 				CB1F787C1F4811B50097772E /* InSelectTableViewCell.xib in Resources */,
 				CB0462E61F301A7700133A19 /* ShoppingTableViewCell.xib in Resources */,
+				CB96F3DF1F55000A001AD284 /* OrderDetailTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1762,8 +1855,10 @@
 				CBE2713C1F5013F300811506 /* LoginViewController.m in Sources */,
 				CBD9F1BC1F35A23A0074FB35 /* CasesTableViewCell.m in Sources */,
 				CB990D991F3169A100B8AD40 /* MonthOpeartion.m in Sources */,
+				CB96F3DE1F55000A001AD284 /* OrderDetailTableViewCell.m in Sources */,
 				CBE3B4921F2B24C400E47D54 /* LeftTableViewCell.m in Sources */,
 				CB9A5EDF1F458A0D0031803D /* ProjectInView.m in Sources */,
+				CB96F3D91F54F6FB001AD284 /* OrderDetailHelper.m in Sources */,
 				CB4DC99E1F4EA99E00375461 /* HeaderTableViewCell.m in Sources */,
 				CBE271651F517DB800811506 /* AccountCenterVC.m in Sources */,
 				CB1F787B1F4811B50097772E /* InSelectTableViewCell.m in Sources */,
@@ -1783,6 +1878,7 @@
 				CBFB0EFB1F3ADF810043C969 /* YYPhotoBrowseView.m in Sources */,
 				CBE271561F51550000811506 /* AppointmentView.m in Sources */,
 				CBAE3F1C1F42CC4500C18BF4 /* MineTableViewCell.m in Sources */,
+				CB96F3E81F55084E001AD284 /* OrderPriceTableViewCell.m in Sources */,
 				CB0462C51F2EC27300133A19 /* PeriodTimeView.m in Sources */,
 				CB990DFA1F318ABF00B8AD40 /* TAAnimatedDotView.m in Sources */,
 				CBE3B4441F28744E00E47D54 /* UIControl+CYLTabBarControllerExtention.m in Sources */,
@@ -1790,12 +1886,14 @@
 				CB990DFC1F318ABF00B8AD40 /* TAPageControl.m in Sources */,
 				CBE3B5351F2C273000E47D54 /* NSObject+Astray.m in Sources */,
 				CBE3B4281F2829F700E47D54 /* BaseCMViewController.m in Sources */,
+				CB96F3E31F550333001AD284 /* ConsumablesTableViewCell.m in Sources */,
 				CB96F3D11F540F9D001AD284 /* OrderTableViewCell.m in Sources */,
 				CBA2FF231F4184AB0019883B /* PublicTools.m in Sources */,
 				CB120DD81F2746080091477C /* ZHTabBarControllerConfig.m in Sources */,
 				CBE3B46A1F28748A00E47D54 /* TZImagePickerController.m in Sources */,
 				CBFB62791F4D199E00DA946A /* ChannelMerchantsHelper.m in Sources */,
 				CBE3B52C1F2C265E00E47D54 /* ZHDateCell.m in Sources */,
+				CB96F3FA1F5554BC001AD284 /* AppointmentDetailVC.m in Sources */,
 				CB0462D41F2F1FFD00133A19 /* ProjectPopView.m in Sources */,
 				CB990E1A1F31AA9200B8AD40 /* PlatformeViewController.m in Sources */,
 				CB990E2D1F32B1BE00B8AD40 /* PlatformDetailHelper.m in Sources */,
@@ -1839,6 +1937,7 @@
 				CB0462ED1F30302A00133A19 /* ShoppingPopCell.m in Sources */,
 				CB0462E11F3014AD00133A19 /* ShoppingModel.m in Sources */,
 				CBD9F1C41F35A6950074FB35 /* AddCasesHelper.m in Sources */,
+				CB96F3F51F5550AF001AD284 /* AppointmentTableViewCell.m in Sources */,
 				CB1F78771F46EF3C0097772E /* InProjectPopCell.m in Sources */,
 				CBE3B5421F2C671700E47D54 /* TestTableViewController.m in Sources */,
 				CBE2714B1F51299700811506 /* AppointTableViewCell.m in Sources */,
@@ -1885,6 +1984,7 @@
 				CB81B4A71F3D48A90099A064 /* CasesAfterHelper.m in Sources */,
 				CBA2FF321F41AAA30019883B /* FunctionTableViewCell.m in Sources */,
 				CB9A5ED51F442DBD0031803D /* LocationAdress.m in Sources */,
+				CB96F3FD1F555500001AD284 /* AppointmentHelper.m in Sources */,
 				CBD9F1B31F35A0B20074FB35 /* PayOrderTableViewCell.m in Sources */,
 				CBAE3F2C1F43004B00C18BF4 /* ChannelCertificationVC.m in Sources */,
 				CBE2714F1F51505E00811506 /* AppointmentSVC.m in Sources */,
@@ -1893,6 +1993,8 @@
 				CB0462F01F30671100133A19 /* UIView+Controller.m in Sources */,
 				CBE3B5311F2C26EB00E47D54 /* InputTableViewCell.m in Sources */,
 				CBE3B5451F2C776B00E47D54 /* OperationView.m in Sources */,
+				CB96F3F01F554EA3001AD284 /* MineAppointmentHelper.m in Sources */,
+				CB96F3ED1F554BE2001AD284 /* MineAppointmentVC.m in Sources */,
 				CBE3B4671F28748A00E47D54 /* TZImageCropManager.m in Sources */,
 				CB990D951F3169A100B8AD40 /* BSLCalendar.m in Sources */,
 				CB990D961F3169A100B8AD40 /* BSLMonthCollectionView.m in Sources */,

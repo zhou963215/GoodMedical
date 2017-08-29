@@ -12,6 +12,7 @@
 #import "DetailMineViewController.h"
 #import "AccountCenterVC.h"
 #import "MineOrderViewController.h"
+#import "MineAppointmentVC.h"
 @interface MineHelper ()
 @property (strong, nonatomic) UIImageView *imageView;
 
@@ -128,7 +129,12 @@
         
         [self.tableView.navigationController pushViewController:[MineOrderViewController new] animated:YES];
         
+    }if ([dict[@"name"]isEqualToString:@"我的预约"]) {
+        
+        [self.tableView.navigationController pushViewController:[MineAppointmentVC new] animated:YES];
+        
     }
+
     
 //    [self.tableView.navigationController pushViewController:[CertificationSelectVC new] animated:YES];
     
@@ -191,7 +197,7 @@
     
     UILabel * nameLabel = [UILabel new];
     nameLabel.font = [UIFont systemFontOfSize:14];
-    nameLabel.text = @"啊啊啊啊啊";
+    nameLabel.text = @"六多兰盖伦";
     [bottom addSubview:nameLabel];
     
     

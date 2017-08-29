@@ -25,6 +25,8 @@
     
 }
 
+
+
 - (instancetype)initWithValue:(NSString *)value tip:(NSString * )tip title:(NSString *)title{
     
    self =  [super init];
