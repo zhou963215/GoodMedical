@@ -165,8 +165,7 @@
     UIImage * image = info[UIImagePickerControllerOriginalImage];
     
     self.headerCell.header.image = image;
-    NSData * data = UIImageJPEGRepresentation(image, 0.1);
-    
+//    NSData * data = UIImageJPEGRepresentation(image, 0.1);
 //    [[ZHNetWorking sharedZHNetWorking]UpWithPOST:UPLOADIMG parameters:@{} data:data UpFileType:@"image" success:^(id  _Nonnull responseObject) {
 //        
 //        NSLog(@"%@",responseObject);

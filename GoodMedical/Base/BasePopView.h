@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef void (^ Success)(NSMutableArray *);     // 成功Block
 
 @interface BasePopView : UIView
 

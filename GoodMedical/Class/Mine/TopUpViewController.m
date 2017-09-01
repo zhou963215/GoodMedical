@@ -17,9 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.backgroundColor = UICOLORRGB(0xf5f5f5);
     self.title = @"账户充值";
-    
     [self addTopUP];
 
 
@@ -41,4 +41,5 @@
     
     
 }
+
 @end

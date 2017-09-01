@@ -64,7 +64,6 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     
-    
     return _rows.count;
     
 }
@@ -82,7 +81,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
+    [self.tableView.viewController.view endEditing:YES];
+
     
 }
 

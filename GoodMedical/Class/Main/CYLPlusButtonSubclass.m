@@ -128,8 +128,8 @@
     alert.ButtonClick = ^void(UIButton *button){
         
         NSLog(@"%ld",(long)button.tag);
-        CYLTabBarController *tabBarController = [self cyl_tabBarController];
-        UINavigationController *viewController = tabBarController.selectedViewController;
+//        CYLTabBarController *tabBarController = [self cyl_tabBarController];
+//        UINavigationController *viewController = tabBarController.selectedViewController;
         //     * nav = viewController.navigationController;
         
         switch (button.tag) {

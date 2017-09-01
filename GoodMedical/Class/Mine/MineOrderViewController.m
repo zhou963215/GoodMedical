@@ -29,6 +29,7 @@
     
     
     _orderHelper = [MineOrderHelper blog];
+    
     [self.view addSubview:_orderHelper.tableView];
     
     WEAKSELF(wk);

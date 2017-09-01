@@ -10,4 +10,6 @@
 
 @interface MineOrderViewController : BaseCMViewController
 
+@property (nonatomic, assign) NSInteger type;
+
 @end

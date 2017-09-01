@@ -1,20 +1,19 @@
 //
-//  MineOrderHelper.h
+//  MembersHelper.h
 //  GoodMedical
 //
-//  Created by zhou on 2017/8/28.
+//  Created by zhou on 2017/8/30.
 //  Copyright © 2017年 zhou. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface MineOrderHelper : NSObject<UITableViewDelegate,UITableViewDataSource>
+@interface MembersHelper : NSObject<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *tableView;
 @property (nonatomic,strong) NSArray * dataArray;
-@property (nonatomic, assign) NSInteger type;
-+(instancetype)blog;
 
++(instancetype)blog;
 
 
 @end

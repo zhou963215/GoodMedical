@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="186" id="KGk-i7-Jjw" customClass="MembersTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="185.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsG-HN-AFr">
+                        <rect key="frame" x="20" y="20" width="280" height="40"/>
+                        <color key="backgroundColor" red="0.17957795800000001" green="0.79238113700000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="SVB-0t-XK8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="立即购买">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eax-7L-scV">
+                        <rect key="frame" x="10" y="80" width="300" height="95.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DsG-HN-AFr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="0aq-if-o9r"/>
+                    <constraint firstAttribute="trailing" secondItem="Eax-7L-scV" secondAttribute="trailing" constant="10" id="6Jm-fw-hTN"/>
+                    <constraint firstAttribute="bottom" secondItem="Eax-7L-scV" secondAttribute="bottom" constant="10" id="DSP-t9-bz5"/>
+                    <constraint firstItem="Eax-7L-scV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="DoN-Kl-FgG"/>
+                    <constraint firstItem="Eax-7L-scV" firstAttribute="top" secondItem="DsG-HN-AFr" secondAttribute="bottom" constant="20" id="JqV-Ga-BK0"/>
+                    <constraint firstItem="DsG-HN-AFr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="KKr-y0-yIK"/>
+                    <constraint firstAttribute="trailing" secondItem="DsG-HN-AFr" secondAttribute="trailing" constant="20" id="ZtB-w7-Tf3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="buyBtn" destination="DsG-HN-AFr" id="ER1-Of-Z02"/>
+                <outlet property="buyDetailLB" destination="Eax-7L-scV" id="dWk-r1-kyP"/>
+            </connections>
+            <point key="canvasLocation" x="-27" y="84"/>
+        </tableViewCell>
+    </objects>
+</document>

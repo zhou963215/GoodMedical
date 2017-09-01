@@ -1,27 +1,29 @@
 //
-//  TopUpHelper.m
+//  MembersHelper.m
 //  GoodMedical
 //
-//  Created by zhou on 2017/8/28.
+//  Created by zhou on 2017/8/30.
 //  Copyright © 2017年 zhou. All rights reserved.
 //
 
-#import "TopUpHelper.h"
-#import "InputTableViewCell.h"
-#import "TopUpTableViewCell.h"
-@interface TopUpHelper ()
-@property (nonatomic, strong) InputTableViewCell * priceCell;
-@property (nonatomic, strong) TopUpTableViewCell * topUpCell;
+#import "MembersHelper.h"
+#import "LevelTableViewCell.h"
+#import "MembersTableViewCell.h"
+@interface MembersHelper ()
 
 @property (nonatomic, strong) NSArray * rows;
 
+@property (nonatomic, strong) LevelTableViewCell * levelCell;
+@property (nonatomic, strong) MembersTableViewCell * membersCell;
+
 @end
 
-@implementation TopUpHelper
+@implementation MembersHelper
+
 
 +(instancetype)blog{
     
-    return [[TopUpHelper alloc]init];
+    return [[MembersHelper alloc]init];
 }
 
 - (instancetype)init{
@@ -38,6 +40,7 @@
         self.tableView.estimatedRowHeight = 44;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         [self.tableView registerNib:[UINib nibWithNibName:@"MineTableViewCell" bundle:nil] forCellReuseIdentifier:@"mine"];
+        [self.tableView registerClass:[LevelTableViewCell class] forCellReuseIdentifier:@"level"];
         self.tableView.tableHeaderView = [self creatHeaderView];
         self.tableView.tableFooterView = [UIView new];
         [self refreshRows];
@@ -53,15 +56,22 @@
 
 - (void)refreshRows{
     
-    self.rows = @[self.priceCell,self.topUpCell];
-   
+    self.rows = @[self.levelCell,self.membersCell];
+    
     
 }
 
 #pragma mark  tableview代理方法
 
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row == 0) {
+        
+        return 80;
+    }
+    return  UITableViewAutomaticDimension;
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     
@@ -88,25 +98,26 @@
 }
 
 
-- (InputTableViewCell *)priceCell{
+- (LevelTableViewCell *)levelCell{
     
-    if (!_priceCell) {
+    if (!_levelCell) {
         
-        _priceCell = [[InputTableViewCell alloc]initWithValue:@"" tip:@"请输入充值金额" title:@"金额"];
-        _priceCell.inupt.keyboardType = UIKeyboardTypeNumberPad;
+        _levelCell = [[LevelTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"level"];
+
     }
     
-    return _priceCell;
+    return _levelCell;
 }
 
-- (TopUpTableViewCell *)topUpCell{
+- (MembersTableViewCell *)membersCell{
     
-    if (!_topUpCell) {
+    if (!_membersCell) {
         
-        _topUpCell = [[[NSBundle mainBundle]loadNibNamed:@"TopUpTableViewCell" owner:self options:nil]firstObject];
+        _membersCell = [[[NSBundle mainBundle]loadNibNamed:@"MembersTableViewCell" owner:self options:nil]firstObject];
+        [_membersCell.buyBtn addTarget:self action:@selector(buyMembers:) forControlEvents:UIControlEventTouchUpInside];
         
     }
-    return _topUpCell;
+    return _membersCell;
 }
 
 - (UIView *)creatHeaderView{
@@ -115,7 +126,7 @@
     view.backgroundColor = UICOLORRGB(0xf5f5f5);
     
     UILabel * titleLB = [UILabel new];
-    titleLB.text = @"您当前账户可用余额为0.00元";
+    titleLB.text = @"请选择购买的包月会员等级";
     titleLB.textColor =UICOLORRGB(0x777777);
     titleLB.font = [UIFont systemFontOfSize:12];
     [view addSubview:titleLB];
@@ -136,5 +147,23 @@
     return view;
     
 }
+
+- (void)buyMembers:(UIButton *)sender{
+    
+    
+    if (_levelCell.select == 0) {
+        
+        [ZHHud initWithMessage:@"请选择购买会员等级"];
+        
+        return;
+    }
+    
+    NSLog(@"%ld",(long)_levelCell.select);
+    
+    
+    
+    
+}
+
 
 @end

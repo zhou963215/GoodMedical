@@ -40,5 +40,12 @@
 #define BESPEAK_ISENABLE_TIMES       BESPEAK_MODULE@"isenable-times"//某个时间段是否可用
 #define BESPEAK_BESPEAK_PAY          BESPEAK_MODULE@"bespeak-pay"//预约支付
 
+//短信模块
+#define SMS_MODULE                   BASEURL@"sms"
+#define SMS_SENDCODE                 SMS_MODULE@"send_code"//发送验证码
+#define SMS_SENDMEEAGE               SMS_MODULE@"send-message"//发送短信
+
+
+
 
 #endif /* Url_h */

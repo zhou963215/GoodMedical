@@ -10,6 +10,7 @@
 #import "MineTableViewCell.h"
 #import "TopUpViewController.h"
 #import "TopDownViewController.h"
+#import "RecordViewController.h"
 @interface AccountCenterHelper ()
 
 @property (nonatomic, strong) NSArray * rows;
@@ -98,9 +99,23 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-//    [self.tableView.navigationController pushViewController:[TopUpViewController new] animated:YES];
+    NSDictionary * dict = _rows[indexPath.section][indexPath.row];
     
-    [self.tableView.navigationController pushViewController:[TopDownViewController new] animated:YES];
+    if ([dict[@"name"]isEqualToString:@"账户充值"]) {
+        
+            [self.tableView.navigationController pushViewController:[TopUpViewController new] animated:YES];
+
+    } if ([dict[@"name"]isEqualToString:@"账户提现"]) {
+        
+        [self.tableView.navigationController pushViewController:[TopDownViewController new] animated:YES];
+
+    }if ([dict[@"name"]isEqualToString:@"账单记录"]) {
+        
+        [self.tableView.navigationController pushViewController:[RecordViewController new] animated:YES];
+        
+    }
+    
+    
 }
 
 - (UIView *)creatHeaderView{
